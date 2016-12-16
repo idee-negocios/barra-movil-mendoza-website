@@ -1,13 +1,13 @@
 {
   "name": "metalsmith-base",
   "version": "1.0.0",
-  "description": "",
+  "description": "A project skeleton for metalsmith",
   "main": "index.js",
-  "author": "Patrick Heeney",
+  "author": "Alan Boglioli <alan.boglioli@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:evocode/metalsmith-base.git"
+    "url": "git@github.com:aboglioli/metalsmith-base.git"
   },
   "homepage": "https://github.com/evocode/metalsmith-base",
   "scripts": {
@@ -27,7 +27,10 @@
     "finalhandler": "^0.4.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "^2.6.1",
     "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^2.0.0",
     "handlebars": "^4.0.1",
     "handlebars-layouts": "^3.1.2",
     "metalsmith": "^2.0.1",
@@ -39,15 +42,12 @@
     "metalsmith-html-minifier": "^1.1.0",
     "metalsmith-layouts": "^1.4.0",
     "metalsmith-markdown": "^0.2.1",
+    "metalsmith-metadata": "0.0.4",
     "metalsmith-pagination": "^1.2.0",
     "metalsmith-permalinks": "^0.4.0",
     "minimist": "^1.2.0",
     "moment": "^2.10.6",
     "serve-static": "^1.10.0",
     "webpack": "^1.12.1"
-  },
-  "dependencies": {
-    "jquery": "^2.1.4",
-    "bootstrap": "https://github.com/twbs/bootstrap/archive/v4.0.0-alpha.2.tar.gz"
   }
 }
