@@ -1,6 +1,6 @@
 # Metalsmith Base
 
-A metalsmith base starter kit used at [Evocode.com](http://evocode.com/). Some features:
+A metalsmith base starter kit. Some features:
 
 - [Metalsmith](http://metalsmith.io/)
 - [Gulp](http://gulpjs.com/)
@@ -15,7 +15,7 @@ A metalsmith base starter kit used at [Evocode.com](http://evocode.com/). Some f
 
 ```
 mkdir newproject
-git clone git@github.com:evocode/metalsmith-base.git newproject
+git clone git@github.com:aboglioli/metalsmith-base.git newproject
 cd newproject
 npm install
 ```
@@ -29,18 +29,22 @@ npm run start
 
 ## Build
 
-This command will build a production version of the site and sync it with a git repository, ready to be comitted.
-
-To link the build process to your repository, you can do of the following options:
-
-1. Create a repo dotfile: `echo "git@github.com:username/repository.git" > .buildrepo`
-1. Edit `package.json` script section: `"build": "./node_modules/.bin/gulp --production --build && ./build.sh git@github.com:username/repository.git"`
-
-After the repository is setup, simply run:
-
 ```
 npm run build
 ```
+
+If you want to build your site for production.
+
+```
+npm run production
+```
+
+*The above command is used by TravisCi.*
+
+## TravisCI and Surge
+
+This project uses TravisCI as Continous Integration system and [Surge](surge.sh)
+to publish the web site.
 
 ## Commands
 
