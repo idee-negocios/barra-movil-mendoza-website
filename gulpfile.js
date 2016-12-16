@@ -2,6 +2,11 @@
 var path = require('path');
 var argv = require('minimist')(process.argv.slice(2));
 var gulp = require('gulp');
+
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var cleanCSS = require('gulp-clean-css');
+
 var Metalsmith = require('metalsmith');
 
 // Assets
@@ -10,7 +15,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var webpack = require('webpack');
 
 // Site
-var site = require('./site');
+var site = require('./config');
 
 // Handlebars
 var Handlebars = require('handlebars');
@@ -70,10 +75,21 @@ gulp.task('metalsmith', function(callback) {
   setupMetalsmith(callback);
 });
 
-gulp.task('vendor', function() {
-  return gulp.src(site.vendor)
-    .pipe(gulp.dest(path.join(__dirname, site.metalsmith.config.assetRoot, 'vendor')));
+gulp.task('vendor-scripts', function() {
+  return gulp.src(site.vendor.scripts)
+    .pipe(concat('vendor.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest(path.join(__dirname, site.metalsmith.config.assetRoot, 'assets')));
 });
+
+gulp.task('vendor-styles', function() {
+  return gulp.src(site.vendor.styles)
+    .pipe(concat('vendor.css'))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest(path.join(__dirname, site.metalsmith.config.assetRoot, 'assets')));
+});
+
+gulp.task('vendor', ['vendor-scripts', 'vendor-styles']);
 
 gulp.task('styles', function() {
   return gulp.src(path.join(__dirname, site.metalsmith.config.styleRoot, 'app.scss'))
@@ -117,7 +133,7 @@ gulp.task('webpack', function(callback) {
     },
     output: {
       path: path.join(__dirname, site.metalsmith.config.assetRoot, 'assets'),
-      filename: '[name].js'
+      filename: 'app.js'
     },
     resolveLoader: {
       root: path.join(__dirname, 'node_modules')
@@ -147,7 +163,7 @@ gulp.task('webpack', function(callback) {
 gulp.task('scripts', ['webpack']);
 
 gulp.task('watch', ['default'], function() {
-  gulp.watch(['gulpfile.js', 'site.js'], ['default']);
+  gulp.watch(['gulpfile.js', 'config.js'], ['default']);
   gulp.watch([site.metalsmith.config.styleRoot+'/**/*'], ['styles']);
   gulp.watch([site.metalsmith.config.scriptRoot+'/**/*'], ['scripts']);
   gulp.watch([
@@ -171,7 +187,7 @@ gulp.task('server', ['default', 'watch'], function(callback) {
     serve(req, res, done);
   })
 
-  var serverPort = Math.floor((Math.random() * 1000) + 3000);
+  var serverPort = 4000;
   if (argv.port) {
     serverPort = parseInt(argv.port);
   }
