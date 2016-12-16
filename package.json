@@ -9,7 +9,7 @@
     "type": "git",
     "url": "git@github.com:aboglioli/metalsmith-base.git"
   },
-  "homepage": "https://github.com/evocode/metalsmith-base",
+  "homepage": "https://github.com/aboglioli/metalsmith-base",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "./node_modules/.bin/gulp",
@@ -49,5 +49,9 @@
     "moment": "^2.10.6",
     "serve-static": "^1.10.0",
     "webpack": "^1.12.1"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "bootstrap": "https://github.com/twbs/bootstrap/archive/v4.0.0-alpha.2.tar.gz"
   }
 }

@@ -1,5 +1,8 @@
 module.exports = {
-  "vendor": [],
+  "vendor": {
+    "scripts": "./vendor/js/**/*.js",
+    "styles": "./vendor/css/**/*.css",
+  },
   "scripts": {},
   "styles": {
     "prefix": ["> 1%", "last 2 versions", "IE >= 9"],
@@ -8,7 +11,13 @@ module.exports = {
   "metalsmith": {
     "metadata": {
       "site": {
-        "url": "https://github.com/evocode/metalsmith-base"
+        "root": "/",
+        "url": "http://ideenegocios.com.ar",
+        "title": "IDEE",
+        "assets": {
+          "img": "/img",
+          "icons": "/img/icons"
+        }
       }
     },
     "config": {
@@ -59,6 +68,8 @@ module.exports = {
         "_metalsmith_if": "production",
         "removeAttributeQuotes": false,
         "keepClosingSlash": true
+      },
+      "metalsmith-metadata": {
       }
     }
   }
