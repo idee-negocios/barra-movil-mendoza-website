@@ -15,7 +15,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var webpack = require('webpack');
 
 // Site
-var site = require('./config');
+var config = require('./config');
 
 // Handlebars
 var Handlebars = require('handlebars');
@@ -30,7 +30,7 @@ var args = {
 // Metalsmith
 function setupMetalsmith(callback) {
   var ms = new Metalsmith(process.cwd());
-  var msconfig = site.metalsmith || {};
+  var msconfig = config.metalsmith || {};
   var msplugins = msconfig.plugins || {};
 
   ms.source(msconfig.config.contentRoot);
@@ -76,35 +76,35 @@ gulp.task('metalsmith', function(callback) {
 });
 
 gulp.task('vendor-scripts', function() {
-  return gulp.src(site.vendor.scripts)
+  return gulp.src(config.vendor.scripts)
     .pipe(concat('vendor.js'))
     .pipe(uglify())
-    .pipe(gulp.dest(path.join(__dirname, site.metalsmith.config.assetRoot, 'assets')));
+    .pipe(gulp.dest(path.join(__dirname, config.metalsmith.config.assetRoot, 'assets')));
 });
 
 gulp.task('vendor-styles', function() {
-  return gulp.src(site.vendor.styles)
+  return gulp.src(config.vendor.styles)
     .pipe(concat('vendor.css'))
     .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest(path.join(__dirname, site.metalsmith.config.assetRoot, 'assets')));
+    .pipe(gulp.dest(path.join(__dirname, config.metalsmith.config.assetRoot, 'assets')));
 });
 
 gulp.task('vendor', ['vendor-scripts', 'vendor-styles']);
 
 gulp.task('styles', function() {
-  return gulp.src(path.join(__dirname, site.metalsmith.config.styleRoot, 'app.scss'))
+  return gulp.src(path.join(__dirname, config.metalsmith.config.styleRoot, 'app.scss'))
     .pipe(sass({
       sourceComments: args.production ? false : true,
       outputStyle: args.production ? 'compressed' : 'expanded',
-      includePaths: site.styles.include,
+      includePaths: config.styles.include,
       errLogToConsole: true,
       onError: console.log
     }))
     .pipe(autoprefixer({
-      browsers: site.styles.prefix,
+      browsers: config.styles.prefix,
       cascade: false
     }))
-    .pipe(gulp.dest(path.join(__dirname, site.metalsmith.config.assetRoot, 'assets')));
+    .pipe(gulp.dest(path.join(__dirname, config.metalsmith.config.assetRoot, 'assets')));
 });
 
 gulp.task('webpack', function(callback) {
@@ -126,13 +126,13 @@ gulp.task('webpack', function(callback) {
   }
 
   var webpackConfig = {
-    context: path.join(__dirname, site.metalsmith.config.scriptRoot),
+    context: path.join(__dirname, config.metalsmith.config.scriptRoot),
     entry: {
-      app: './app',
+      app: './app.js',
       vendor: ['jquery']
     },
     output: {
-      path: path.join(__dirname, site.metalsmith.config.assetRoot, 'assets'),
+      path: path.join(__dirname, config.metalsmith.config.assetRoot, 'assets'),
       filename: 'app.js'
     },
     resolveLoader: {
@@ -143,7 +143,10 @@ gulp.task('webpack', function(callback) {
         {
           test: /\.jsx?$/,
           exclude: /(node_modules|bower_components)/,
-          loader: 'babel?optional[]=runtime&stage=0'
+          loader: 'babel-loader',
+          query: {
+            presets: ['es2015']
+          }
         }
       ]
     },
@@ -164,12 +167,12 @@ gulp.task('scripts', ['webpack']);
 
 gulp.task('watch', ['default'], function() {
   gulp.watch(['gulpfile.js', 'config.js'], ['default']);
-  gulp.watch([site.metalsmith.config.styleRoot+'/**/*'], ['styles']);
-  gulp.watch([site.metalsmith.config.scriptRoot+'/**/*'], ['scripts']);
+  gulp.watch([config.metalsmith.config.styleRoot+'/**/*'], ['styles']);
+  gulp.watch([config.metalsmith.config.scriptRoot+'/**/*'], ['scripts']);
   gulp.watch([
-    site.metalsmith.config.contentRoot+'/**/*',
-    site.metalsmith.config.layoutRoot+'/**/*',
-    site.metalsmith.config.assetRoot+'/**/*'
+    config.metalsmith.config.contentRoot+'/**/*',
+    config.metalsmith.config.layoutRoot+'/**/*',
+    config.metalsmith.config.assetRoot+'/**/*'
   ], ['metalsmith']);
 });
 
@@ -178,7 +181,7 @@ gulp.task('server', ['default', 'watch'], function(callback) {
   var serveStatic = require('serve-static');
   var finalhandler = require('finalhandler');
 
-  var serve = serveStatic(site.metalsmith.config.destRoot, {
+  var serve = serveStatic(config.metalsmith.config.destRoot, {
     "index": ['index.html', 'index.htm']
   });
 

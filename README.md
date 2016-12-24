@@ -43,8 +43,8 @@ npm run production
 
 ## TravisCI and Surge
 
-This project uses TravisCI as Continous Integration system and [Surge](surge.sh)
-to publish the web site.
+This project uses [TravisCI](https://travis-ci.org) as Continous Integration
+system and [Surge](https://surge.sh) to publish the web site.
 
 ## Commands
 

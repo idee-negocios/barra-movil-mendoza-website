@@ -18,11 +18,13 @@
     "production": "./node_modules/.bin/gulp --production",
     "build": "./node_modules/.bin/gulp --production --build",
     "watch": "./node_modules/.bin/gulp watch",
-    "vendor": "./node_modules/.bin/gulp vendor"
+    "vendor": "./node_modules/.bin/gulp vendor",
+    "gulp": "./node_modules/.bin/gulp"
   },
   "devDependencies": {
-    "babel-core": "^6.20.0",
+    "babel-core": "^6.21.0",
     "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
     "babel-runtime": "^6.20.0",
     "finalhandler": "^0.5.1",
     "gulp": "^3.9.0",
@@ -48,7 +50,7 @@
     "minimist": "^1.2.0",
     "moment": "^2.10.6",
     "serve-static": "^1.10.0",
-    "webpack": "^1.12.1"
+    "webpack": "^1.14.0"
   },
   "dependencies": {
     "jquery": "^2.1.4",
