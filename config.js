@@ -12,8 +12,8 @@ module.exports = {
     "metadata": {
       "site": {
         "root": "/",
-        "url": "http://ideenegocios.com.ar",
-        "title": "IDEE",
+        "url": "http://yourdomain.com",
+        "title": "Title",
         "assets": {
           "img": "/img",
           "icons": "/img/icons"

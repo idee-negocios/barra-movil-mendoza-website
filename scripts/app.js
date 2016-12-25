@@ -1,6 +1,8 @@
 import $ from 'jquery'
 
-const hi = 'Hello!'
-$('body').append(`<p>${hi}</p>`)
+$(document).ready(() => {
+  console.log('--- Metalsmith + Gulp + Webpack ---');
 
-console.log('--- Metalsmith + Gulp + Webpack ---');
+  const hi = 'Hello from <em>scripts/app.js</em>!'
+  $('footer').prepend(`<p>${hi}</p>`)
+})
