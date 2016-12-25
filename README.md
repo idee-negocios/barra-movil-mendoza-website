@@ -4,24 +4,26 @@ A metalsmith base starter kit. Some features:
 
 - [Metalsmith](http://metalsmith.io/)
 - [Gulp](http://gulpjs.com/)
+- [Webpack](https://github.com/webpack/webpack)
 - [Bootstrap 4](https://github.com/twbs/bootstrap/tree/v4-dev)
 - [jQuery](https://github.com/jquery/jquery)
 - [Babel / ES6](https://babeljs.io/)
-- [Development Server](https://github.com/evocode/metalsmith-base/blob/master/gulpfile.js#L160)
-- [Static Site, Blog, Robots, Sitemap](https://github.com/evocode/metalsmith-base/tree/master/content)
-- [MIT license](https://github.com/evocode/metalsmith-base/blob/master/LICENSE)
+- [Development Server](https://github.com/aboglioli/metalsmith-base/blob/master/gulpfile.js#L179)
+- [Static Site, Blog, Robots, Sitemap](https://github.com/aboglioli/metalsmith-base/tree/master/content)
+- [MIT license](https://github.com/aboglioli/metalsmith-base/blob/master/LICENSE)
 
 ## Install
 
 ```
-mkdir newproject
 git clone git@github.com:aboglioli/metalsmith-base.git newproject
 cd newproject
 npm install
 ```
 ## Develop
 
-This command will fully build a development version of the site, start the gulp watchers, and setup a development server. The command output will list the server address to open in your browser.
+This command will fully build a development version of the site, start the gulp
+watchers, and setup a development server. The command output will list the
+server address to open in your browser.
 
 ```
 npm run start
