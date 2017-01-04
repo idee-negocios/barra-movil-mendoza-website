@@ -1,8 +1,8 @@
 module.exports = {
   site: {
     root: "/",
-    url: "http://yourdomain.com",
-    title: "Title",
+    url: "https://barrasmovilesmendoza.com.ar",
+    title: "John Jarana",
     assets: {
       img: "/img",
       icons: "/img/icons"
