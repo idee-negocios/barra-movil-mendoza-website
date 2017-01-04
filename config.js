@@ -1,3 +1,5 @@
+var data = require('./data');
+
 module.exports = {
   "vendor": {
     "scripts": "./vendor/js/**/*.js",
@@ -9,17 +11,7 @@ module.exports = {
     "include": []
   },
   "metalsmith": {
-    "metadata": {
-      "site": {
-        "root": "/",
-        "url": "http://yourdomain.com",
-        "title": "Title",
-        "assets": {
-          "img": "/img",
-          "icons": "/img/icons"
-        }
-      }
-    },
+    "metadata": data,
     "config": {
       "contentRoot": "./content",
       "assetRoot": "./sources",
