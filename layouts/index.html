@@ -1,9 +1,50 @@
 {{#extend "default"}}
-  {{#content "main"}}
 
-  <p>
-    {{{contents}}}
-  </p>
-
+  {{#content "header-content"}}
+  <div class="content">
+    <div class="body">
+      <h1>
+        BARRAS MÓVILES DE TRAGOS PARA <strong>EVENTOS Y FIESTAS</strong> EN
+        MENDOZA
+      </h1>
+    </div>
+    <div class="button">
+      <button>¡Pedí tu presupuesto!</button>
+    </div>
+  </div>
   {{/content}}
+
+  {{#content "main"}}
+  <section class="main">
+
+    <div class="header">
+      <h2>
+        Con JOHN JARANA...
+      </h2>
+    </div>
+
+    <div class="items">
+      {{#each items}}
+      <article class="item">
+        <div class="icon">
+          <img src="{{../assets.icons}}/{{this.icon}}" alt="{{this.text}}" />
+        </div>
+        <div class="body">
+          <p>{{{this.text}}}</p>
+        </div>
+      </article>
+      {{/each}}
+    </div>
+
+    <div class="footer">
+      <h3>
+        No invitar a <strong>JOHN JARANA</strong> es lo primero que podés hacer
+        mal...
+      </h3>
+      <h4>¿Qué esperas?</h4>
+    </div>
+
+  </section>
+  {{/content}}
+
 {{/extend}}

@@ -3,13 +3,18 @@ module.exports = {
     root: "/",
     url: "https://barrasmovilesmendoza.com.ar",
     title: "John Jarana",
-    assets: {
-      img: "/img",
-      icons: "/img/icons"
-    }
+    author: "Alan Boglioli",
+    logo: 'john-jarana-logo.svg'
   },
-  nav: [
-    {href: '#', title: 'Link 1'},
-    {href: '#', title: 'Link 2'},
+  assets: {
+    img: "/img",
+    icons: "/img/icons"
+  },
+  pages: [
+    {url: '/', name: 'Inicio'},
+    {url: '/patio-cervecero.html', name: 'Patio cervecero'},
+    {url: '/barra-sin-alcohol.html', name: 'Barra sin alcohol'},
+    {url: '/eventos-empresariales.html', name: 'Eventos empresariales'},
+    {url: '/bodas-y-fiestas.html', name: 'Bodas y fiestas'}
   ]
 }
