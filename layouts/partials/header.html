@@ -1,17 +1,23 @@
-<header>
-  <nav>
-    <img src="{{assets.img}}/{{site.logo}}" alt="{{description}}" />
+<header class="header">
+  <nav class="menu">
 
-    <ul>
+    <div class="icon">
+      <img src="{{assets.img}}/{{site.logo}}" alt="{{description}}" />
+    </div>
+
+    <ul class="navbar">
       {{#each pages}}
-      <li {{#ifCond this.url '==' ../url}}class="active"{{/ifCond}}>
+      <li class="navbar-item {{#ifCond this.url '==' ../url}}active{{/ifCond}}">
         <a href="{{this.url}}">{{this.name}}</a>
       </li>
       {{/each}}
     </ul>
+
   </nav>
 
-  {{#block "header-content"}}
+  <div class="header-content">
+    {{#block "header-content"}}
     {{{contents}}}
-  {{/block}}
+    {{/block}}
+  </div>
 </header>

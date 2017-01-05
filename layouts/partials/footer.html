@@ -1,2 +1,19 @@
 <footer>
+  <div class="copyright">
+    <p>
+      Todos los derechos reservados <a href="#">IDEE</a>
+    </p>
+  </div>
+
+  {{> brands}}
+
+  <div class="contact-information">
+    {{#each contact}}
+    <div class="contact-item">
+      <img src="{{../assets.icons}}/{{this.icon}}" alt="{{this.text}}"/>
+      <p class="text">{{this.text}}</p>
+    </div>
+    {{/each}}
+  </div>
+
 </footer>
