@@ -1,15 +1,15 @@
 {
-  "name": "metalsmith-base",
+  "name": "john-jarana-website",
   "version": "1.0.0",
-  "description": "A project skeleton for metalsmith",
+  "description": "Barras Móviles John Jarana",
   "main": "index.js",
   "author": "Alan Boglioli <alan.boglioli@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:aboglioli/metalsmith-base.git"
+    "url": "git@github.com:aboglioli/john-jarana-website.git"
   },
-  "homepage": "https://github.com/aboglioli/metalsmith-base",
+  "homepage": "https://barramovilmendoza.com.ar",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "./node_modules/.bin/gulp",
