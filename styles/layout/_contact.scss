@@ -1,11 +1,14 @@
 .contact {
   padding: 3rem 0;
   text-align: center;
-  width: 100%;
-  background-color: #eee;
+
+  @include cover-background("/img/contact.png");
+
+  @include opacity(rgba(255, 255, 255, 0.5));
 
   .icon {
     margin: 0 0 2rem 0;
+
     img {
       height: 256px;
       width: 256px;
@@ -19,6 +22,7 @@
       font-size: 2rem;
       margin: 0 0 2rem 0;
     }
+
     p {
       margin: 0;
       line-height: 2;

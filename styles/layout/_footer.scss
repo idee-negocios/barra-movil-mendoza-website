@@ -1,0 +1,62 @@
+.footer {
+  background-color: #555;
+  color: #fff;
+
+  .copyright {
+    padding: 1rem 0;
+
+    p {
+      display: block;
+      margin: 0;
+      text-align: center;
+
+      a {
+        color: #fff;
+        font-weight: 600;
+
+        &:hover {
+          color: #eee;
+        }
+      }
+
+    }
+  }
+
+  .brands {
+    background-color: #777;
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  .contact-information {
+    display: block;
+    text-align: center;
+    margin: 1rem 0;
+
+    .contact-item {
+      display: inline-block;
+      margin: 0;
+
+      .icon {
+        // background-color: #fff;
+        border-radius: 50%;
+        display: inline-block;
+        height: 32px;
+        float: left;
+        width: 32px;
+
+
+        img {
+          width: auto;
+          height: 20px;
+        }
+      }
+
+      .text {
+        float: left;
+        display: inline-block;
+        margin: 0;
+      }
+    }
+  }
+}

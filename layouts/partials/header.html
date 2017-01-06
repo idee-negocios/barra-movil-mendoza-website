@@ -1,4 +1,5 @@
-<header class="header">
+<header class="section header">
+
   <nav class="menu">
 
     <div class="icon">
@@ -8,7 +9,11 @@
     <ul class="navbar">
       {{#each pages}}
       <li class="navbar-item {{#ifCond this.url '==' ../url}}active{{/ifCond}}">
-        <a href="{{this.url}}">{{this.name}}</a>
+        <a href="{{this.url}}">
+          <span>
+            {{this.name}}
+          </span>
+        </a>
       </li>
       {{/each}}
     </ul>
