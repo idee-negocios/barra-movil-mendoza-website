@@ -2,6 +2,7 @@
   padding: 3rem 0;
   text-align: center;
   width: 100%;
+  background-color: #eee;
 
   .icon {
     margin: 0 0 2rem 0;
@@ -26,8 +27,8 @@
 
   .form {
     input, select, textarea {
-      background-color: #eee;
-      border: 1px solid #999;
+      background-color: #fff;
+      border: 1px solid #ddd;
       color: #aaa;
       display: block;
       margin-bottom: 0.5rem;
@@ -40,16 +41,21 @@
     }
 
     textarea {
+      height: 142px;
       padding: 1rem;
       resize: none;
     }
 
-    button {
-      background-color: #555;
-      border: 1px solid #000;
-      color: #fff;
-      font-weight: 600;
-      padding: 0.5rem 1rem;
+    .button-container {
+      text-align: right;
+
+      button {
+        background-color: #555;
+        border: 1px solid #444;
+        color: #fff;
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+      }
     }
   }
 }
