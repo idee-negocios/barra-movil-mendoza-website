@@ -1,2 +1,38 @@
+.header {
+  @extend .ab-header;
+
+  @include cover-background("/img/home/header.png");
+  @include opacity(rgba(0, 0, 0, 0.6));
+
+  .content {
+    .body {
+      color: #fff;
+      margin-bottom: 3rem;
+
+      h1 {
+        font-size: 1.6rem;
+        margin: 0;
+      }
+    }
+
+    .button {
+      button {
+        background-color: #fff;
+        border: none;
+        border-radius: 1.4rem;
+        font-weight: 600;
+        padding: 1rem 2rem;
+      }
+    }
+  }
+}
+
 .main {
+}
+
+.contact {
+  @extend .ab-contact;
+
+  @include cover-background("/img/home/contact.png");
+  @include opacity(rgba(255, 255, 255, 0.5));
 }

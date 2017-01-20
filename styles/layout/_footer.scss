@@ -26,6 +26,13 @@
     background-color: #777;
     padding: 3rem 0;
     text-align: center;
+
+    .brand {
+      width: 64px;
+      max-width: 64px;
+      height: auto;
+      float: left;
+    }
   }
 
   .contact-information {

@@ -1,15 +1,17 @@
 {{#extend "default"}}
 
   {{#content "header-content"}}
-  <div class="content">
-    <div class="body">
-      <h1>
-        BARRAS MÓVILES DE TRAGOS PARA <strong>EVENTOS Y FIESTAS</strong> EN
-        MENDOZA
-      </h1>
-    </div>
-    <div class="button">
-      <button>¡Pedí tu presupuesto!</button>
+  <div class="vertical-container">
+    <div class="content vertical-center">
+      <div class="body">
+        <h1>
+          BARRAS MÓVILES DE TRAGOS PARA <strong>EVENTOS Y FIESTAS</strong> EN
+          MENDOZA
+        </h1>
+      </div>
+      <div class="button">
+        <button>¡Pedí tu presupuesto!</button>
+      </div>
     </div>
   </div>
   {{/content}}
@@ -27,7 +29,7 @@
       {{#each items}}
       <article class="item">
         <div class="icon">
-          <img src="{{../assets.icons}}/{{this.icon}}" alt="{{this.text}}" />
+          <img src="{{../assets.icons}}/{{../prefix}}/{{this.icon}}" alt="{{this.text}}" />
         </div>
         <div class="body">
           <p>{{{this.text}}}</p>

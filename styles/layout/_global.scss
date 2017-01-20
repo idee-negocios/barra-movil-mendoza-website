@@ -9,3 +9,16 @@ body {
   width: 100%;
   overflow: hidden;
 }
+
+.vertical-container {
+  display: table;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+
+  .vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+}

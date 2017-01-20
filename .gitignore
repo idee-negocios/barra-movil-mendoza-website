@@ -1,7 +1,10 @@
 node_modules
 npm-debug.log
 build
+
 sources/assets/*.js
 sources/assets/*.css
 sources/vendor
+sources/img
+
 .tmp

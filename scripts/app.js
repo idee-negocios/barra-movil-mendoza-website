@@ -1,4 +1,4 @@
-import $ from 'jquery'
+import $ from 'jquery';
 
 $(document).ready(() => {
   // elements
@@ -24,4 +24,4 @@ $(document).ready(() => {
       el.val('Mensaje');
     }
   });
-})
+});

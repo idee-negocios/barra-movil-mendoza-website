@@ -1,9 +1,5 @@
-.header {
+.ab-header {
   height: 100vh;
-
-  @include cover-background("/img/home-header.png");
-
-  @include opacity(rgba(0, 0, 0, 0.6));
 
   .menu {
     background: rgba(0, 0, 0, 0.5);
@@ -74,39 +70,6 @@
               transform: scaleX(1);
             }
           }
-        }
-      }
-    }
-  }
-
-  .header-content {
-    display: table;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-
-    .content {
-      display: table-cell;
-      text-align: center;
-      vertical-align: middle;
-
-      .body {
-        color: #fff;
-        margin-bottom: 3rem;
-
-        h1 {
-          font-size: 1.6rem;
-          margin: 0;
-        }
-      }
-
-      .button {
-        button {
-          background-color: #fff;
-          border: none;
-          border-radius: 1.4rem;
-          font-weight: 600;
-          padding: 1rem 2rem;
         }
       }
     }
