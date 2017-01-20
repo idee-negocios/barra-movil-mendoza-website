@@ -23,39 +23,42 @@
   }
 
   .brands {
+    align-content: center;
+    align-items: center;
     background-color: #777;
-    padding: 3rem 0;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 1rem 0;
 
     .brand {
       width: 64px;
-      max-width: 64px;
       height: auto;
-      float: left;
+      margin: auto;
     }
   }
 
   .contact-information {
-    display: block;
-    text-align: center;
-    margin: 1rem 0;
+    padding: 1rem 0;
+    overflow: hidden;
 
     .contact-item {
-      display: inline-block;
-      margin: 0;
+      margin: auto;
 
       .icon {
-        // background-color: #fff;
+        background-color: #fff;
         border-radius: 50%;
+        position: relative;
         display: inline-block;
-        height: 32px;
+        height: 40px;
         float: left;
-        width: 32px;
+        width: 40px;
 
 
         img {
           width: auto;
-          height: 20px;
+          height: auto;
         }
       }
 
