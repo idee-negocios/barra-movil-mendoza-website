@@ -9,16 +9,25 @@
     {{> brands}}
   </div>
 
-  <div class="contact-information">
+  <div class="contact-information row col-xs-12 col-sm-12 col-md-7 col-md-offset-3">
     {{#each contact}}
-    <div class="contact-item">
-      <i class="fa fa-location-arrow"></i>
+    <div class="contact-item col-xs-12 col-md-4 text-center">
+
+
       <div class="icon">
-        <img src="{{../assets.icons}}/{{this.icon}}" alt="{{this.text}}"/>
+        <i class="fa fa-{{this.icon}}"></i>
       </div>
       <p class="text">{{this.text}}</p>
+
+      <div class="clearfix">
+      </div>
+
+
     </div>
     {{/each}}
+
+    <div class="clearfix"></div>
   </div>
+
 
 </footer>

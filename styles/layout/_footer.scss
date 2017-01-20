@@ -41,31 +41,31 @@
 
   .contact-information {
     padding: 1rem 0;
-    overflow: hidden;
+    text-align: center;
 
     .contact-item {
-      margin: auto;
+      display: block;
+      width: 100%;
 
       .icon {
         background-color: #fff;
         border-radius: 50%;
-        position: relative;
-        display: inline-block;
         height: 40px;
         float: left;
         width: 40px;
+        text-align: center;
 
-
-        img {
-          width: auto;
-          height: auto;
+        i {
+          margin-top: 8px;
+          color: #222;
+          font-size: 1.5rem;
         }
       }
 
       .text {
         float: left;
         display: inline-block;
-        margin: 0;
+        margin: 6px 0 0 10px;
       }
     }
   }

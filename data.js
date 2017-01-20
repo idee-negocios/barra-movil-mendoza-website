@@ -18,8 +18,8 @@ module.exports = {
     {url: '/bodas-y-fiestas.html', name: 'Bodas y fiestas'}
   ],
   contact: [
-    {icon: 'email.png', text: 'johnjarana@gmail.com'},
-    {icon: 'phone.png', text: '555 5555'},
-    {icon: 'location.png', text: 'Mapa'}
+    {icon: 'phone', text: 'johnjarana@gmail.com'},
+    {icon: 'envelope', text: '555 5555'},
+    {icon: 'map-marker', text: 'Mapa'}
   ]
 }
