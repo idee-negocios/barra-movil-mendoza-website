@@ -1,3 +1,12 @@
+const globby = require('globby');
+
+function onlyFilenames(arr) {
+  return arr.map(el =>
+                 el.indexOf('/') === -1
+                 ? el
+                 : el.substring(el.lastIndexOf('/') + 1, el.length));
+}
+
 module.exports = {
   site: {
     root: "/",
@@ -9,6 +18,9 @@ module.exports = {
   assets: {
     img: "/img",
     icons: "/img/icons"
+  },
+  files: {
+    brandIcons: onlyFilenames(globby.sync(['./sources/img/icons/brands/*']))
   },
   pages: [
     {url: '/', name: 'Inicio'},

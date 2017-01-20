@@ -28,6 +28,38 @@
 }
 
 .main {
+  @include cover-background("/img/home/main.png");
+  @include opacity(rgba(255, 255, 255, 0.2));
+
+  .main-header {
+    padding: 10rem 0;
+    text-align: center;
+
+    h2 {
+      font-size: 2.5rem;
+    }
+  }
+
+  .main-items {
+    padding: 2rem 0;
+
+    @include opacity(rgba(0, 0, 0, 0.5));
+  }
+
+  .main-footer {
+    padding: 2rem 0;
+    text-align: center;
+
+    h3 {
+      font-size: 1rem;
+      margin: 0 0 1rem 0;
+    }
+
+    h4 {
+      font-size: 1rem;
+      margin: 0;
+    }
+  }
 }
 
 .contact {
