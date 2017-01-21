@@ -3,12 +3,12 @@ var data = require('./data');
 module.exports = {
   "vendor": {
     "scripts": "./vendor/js/**/*.js",
-    "styles": "./vendor/css/**/*.css",
+    "styles": "./vendor/css/**/*.css"
   },
   "scripts": {},
   "styles": {
     "prefix": ["> 1%", "last 2 versions", "IE >= 9"],
-    "include": []
+    "include": ['./node_modules']
   },
   "metalsmith": {
     "metadata": data,

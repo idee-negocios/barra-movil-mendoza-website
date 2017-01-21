@@ -27,6 +27,9 @@
   }
 
   .form {
+    width: 60%;
+    margin-left: 20%;
+
     input, select, textarea {
       background-color: #fff;
       border: 1px solid #ddd;
@@ -35,6 +38,7 @@
       margin-bottom: 0.5rem;
       outline: none;
       width: 100%;
+      box-sizing: border-box;
     }
 
     input, select {
@@ -42,7 +46,7 @@
     }
 
     textarea {
-      height: 142px;
+      height: 156px;
       padding: 1rem;
       resize: none;
     }
@@ -57,6 +61,22 @@
         font-weight: 600;
         padding: 0.5rem 1rem;
       }
+
+    }
+
+    .left-content, .right-content {
+      box-sizing: border-box;
+      width: 50%;
+    }
+
+    .left-content {
+      float: left;
+      padding-right: 0.25rem;
+    }
+
+    .right-content {
+      float: right;
+      padding-left: 0.25rem;
     }
   }
 }

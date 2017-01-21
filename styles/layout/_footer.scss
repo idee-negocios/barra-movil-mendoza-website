@@ -44,8 +44,8 @@
     text-align: center;
 
     .contact-item {
-      display: block;
-      width: 100%;
+      display: inline-block;
+      padding: 0 1rem;
 
       .icon {
         background-color: #fff;
@@ -65,7 +65,9 @@
       .text {
         float: left;
         display: inline-block;
-        margin: 6px 0 0 10px;
+        margin: 12px 0 0 10px;
+        font-weight: 600;
+        text-shadow: 0 0 1px #000;
       }
     }
   }

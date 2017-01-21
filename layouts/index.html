@@ -26,16 +26,25 @@
     </div>
 
     <div class="main-items">
+
       {{#each items}}
       <article class="item">
-        <div class="icon">
-          <img src="{{../assets.icons}}/{{../prefix}}/{{this.icon}}" alt="{{this.text}}" />
-        </div>
-        <div class="body">
-          <p>{{{this.text}}}</p>
-        </div>
+
+          <div class="icon">
+            <div class="vertical-container">
+              <div class="image-container vertical-center">
+                <img src="{{../assets.icons}}/{{../prefix}}/{{this.icon}}" alt="{{this.text}}" />
+              </div>
+            </div>
+          </div>
+
+          <div class="body">
+            <p>{{{this.text}}}</p>
+          </div>
+
       </article>
       {{/each}}
+
     </div>
 
     <div class="main-footer">
@@ -43,7 +52,7 @@
         No invitar a <strong>JOHN JARANA</strong> es lo primero que podés hacer
         mal...
       </h3>
-      <h4>¿Qué esperas?</h4>
+      <h4>¿Qué esperás?</h4>
     </div>
 
   </section>

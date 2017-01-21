@@ -32,18 +32,58 @@
   @include opacity(rgba(255, 255, 255, 0.2));
 
   .main-header {
-    padding: 10rem 0;
+    padding: 8rem 0;
     text-align: center;
 
     h2 {
+      color: rgba(0, 0, 0, 0.6);
       font-size: 2.5rem;
     }
   }
 
   .main-items {
-    padding: 2rem 0;
+    padding: 4rem 0;
+    overflow: hidden;
 
     @include opacity(rgba(0, 0, 0, 0.5));
+
+    .item {
+      text-align: center;
+      padding: 0 1rem;
+      float: left;
+      width: 20%;
+      box-sizing: border-box;
+
+      .icon {
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.8);
+        width: 128px;
+        height: 128px;
+        display: inline-block;
+        position: relative;
+
+        .image-container {
+          img {
+            width: 64px;
+            height: auto;
+            opacity: 0.6;
+            filter: alpha(opacity=50); /* For IE8 and earlier */
+          }
+        }
+      }
+
+      .body {
+        padding: 1rem 0;
+
+        p {
+          color: #fff;
+          font-size: 1rem;
+          text-align: left;
+          line-height: 1.5;
+        }
+      }
+
+    }
   }
 
   .main-footer {

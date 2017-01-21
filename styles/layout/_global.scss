@@ -4,6 +4,18 @@ body {
   position: relative;
 }
 
+strong, b {
+  font-weight: 600;
+}
+
+em, i {
+  font-style: italic;
+}
+
+a:hover, button:hover {
+  cursor: pointer;
+}
+
 .section {
   position: relative;
   width: 100%;
@@ -21,4 +33,8 @@ body {
     text-align: center;
     vertical-align: middle;
   }
+}
+
+.clearfix {
+  clear: both;
 }

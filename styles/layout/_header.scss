@@ -29,11 +29,13 @@
       .navbar-item {
         float: left;
         margin-right: 1.5rem;
+        list-style: none;
 
         a {
           color: #eee;
           text-decoration: none;
           font-weight: 600;
+          line-height: 1.5;
 
           &:hover {
             color: #fff;
