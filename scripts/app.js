@@ -1,6 +1,8 @@
 import $ from 'jquery';
 
 $(document).ready(() => {
+  console.log(files);
+
   // elements
   const messageEl = $('#mensaje');
   const contactFormEl = $('#contact-form');
