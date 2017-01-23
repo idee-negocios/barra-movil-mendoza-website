@@ -1,4 +1,4 @@
-<header class="section header">
+<header class="section {{prefix}}-header">
 
   <nav class="menu">
 
@@ -6,17 +6,27 @@
       <img src="{{assets.img}}/{{site.logo}}" alt="{{description}}" />
     </div>
 
-    <ul class="navbar">
-      {{#each pages}}
-      <li class="navbar-item {{#ifCond this.url '==' ../url}}active{{/ifCond}}">
-        <a href="{{this.url}}">
-          <span>
-            {{this.name}}
-          </span>
-        </a>
-      </li>
-      {{/each}}
-    </ul>
+    <div class="navbar-container">
+      <div class="navbar-button">
+        <button id="toggle-navbar"><i class="fa fa-bars"></i></button>
+      </div>
+
+      <ul class="navbar">
+        {{#each pages}}
+        <li class="navbar-item {{#ifCond this.url '==' ../url}}active{{/ifCond}}">
+          <a href="{{this.url}}">
+            <span>
+              {{this.name}}
+            </span>
+          </a>
+        </li>
+        {{/each}}
+      </ul>
+
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="clearfix"></div>
 
   </nav>
 

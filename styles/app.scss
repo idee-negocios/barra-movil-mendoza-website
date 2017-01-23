@@ -2,8 +2,6 @@
 @import "variables";
 @import "mixins";
 
-/* Custom */
-
 // Structure
 @import "layout/global";
 @import "layout/header";
@@ -15,3 +13,6 @@
 
 // Pages
 @import "pages/home";
+
+// Responsive
+@import 'responsive';

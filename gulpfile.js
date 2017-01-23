@@ -113,11 +113,11 @@ gulp.task('webpack', function(callback) {
         $: "jquery",
         jQuery: "jquery"
       }),
-      new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'),
+      new webpack.optimize.CommonsChunkPlugin('vendor', 'commons.chunk.js'),
       new webpack.DefinePlugin({
         "process.env": {
-          NODE_ENV: JSON.stringify(args.production ? 'production' : 'development'),
-        },
+          NODE_ENV: JSON.stringify(args.production ? 'production' : 'development')
+        }
       })
   ];
 

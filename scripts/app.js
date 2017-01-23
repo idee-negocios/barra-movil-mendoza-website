@@ -1,29 +1,9 @@
 import $ from 'jquery';
 
+import * as Navbar from './navbar';
+import * as Form from './form';
+
 $(document).ready(() => {
-  console.log(files);
-
-  // elements
-  const messageEl = $('#mensaje');
-  const contactFormEl = $('#contact-form');
-
-  // submit form
-  contactFormEl.submit((e) => {
-    e.preventDefault();
-  });
-
-  // message textarea
-  messageEl.focus(() => {
-    const el = messageEl;
-    if(el.val() === 'Mensaje') {
-      el.val('');
-    }
-  });
-
-  $('#mensaje').blur(() => {
-    const el = messageEl;
-    if(el.val() === '') {
-      el.val('Mensaje');
-    }
-  });
+  Navbar.init();
+  Form.init();
 });

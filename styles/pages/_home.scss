@@ -1,4 +1,4 @@
-.header {
+.home-header {
   @extend .ab-header;
 
   @include cover-background("/img/home/header.png");
@@ -27,7 +27,7 @@
   }
 }
 
-.main {
+.home-section {
   @include cover-background("/img/home/main.png");
   @include opacity(rgba(255, 255, 255, 0.2));
 
@@ -44,45 +44,53 @@
   .main-items {
     padding: 4rem 0;
     overflow: hidden;
+    text-align: center;
 
     @include opacity(rgba(0, 0, 0, 0.5));
 
-    .item {
-      text-align: center;
-      padding: 0 1rem;
-      float: left;
-      width: 20%;
+    .item-container {
+      width: 80%;
+      margin-left: 10%;
       box-sizing: border-box;
+      overflow: hidden;
 
-      .icon {
-        border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.8);
-        width: 128px;
-        height: 128px;
-        display: inline-block;
-        position: relative;
+      .item {
+        text-align: center;
+        padding: 1rem;
+        float: left;
+        width: 20%;
+        box-sizing: border-box;
 
-        .image-container {
-          img {
-            width: 64px;
-            height: auto;
-            opacity: 0.6;
-            filter: alpha(opacity=50); /* For IE8 and earlier */
+        .icon {
+          border-radius: 50%;
+          background-color: rgba(255, 255, 255, 0.8);
+          width: 128px;
+          height: 128px;
+          display: inline-block;
+          position: relative;
+
+          .image-container {
+            img {
+              width: 64px;
+              height: auto;
+              opacity: 0.6;
+              filter: alpha(opacity=50); /* For IE8 and earlier */
+            }
           }
         }
-      }
 
-      .body {
-        padding: 1rem 0;
+        .body {
+          padding: 1rem 0;
 
-        p {
-          color: #fff;
-          font-size: 1rem;
-          text-align: left;
-          line-height: 1.5;
+          p {
+            color: #fff;
+            font-size: 1rem;
+            text-align: justify;
+            line-height: 1.5;
+          }
         }
-      }
 
+      }
     }
   }
 
@@ -102,7 +110,7 @@
   }
 }
 
-.contact {
+.home-contact {
   @extend .ab-contact;
 
   @include cover-background("/img/home/contact.png");

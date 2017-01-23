@@ -17,7 +17,7 @@
   {{/content}}
 
   {{#content "main"}}
-  <section class="main">
+  <section class="{{prefix}}-section">
 
     <div class="main-header">
       <h2>
@@ -27,8 +27,9 @@
 
     <div class="main-items">
 
-      {{#each items}}
-      <article class="item">
+      <div class="item-container">
+        {{#each items}}
+        <article class="item">
 
           <div class="icon">
             <div class="vertical-container">
@@ -42,8 +43,9 @@
             <p>{{{this.text}}}</p>
           </div>
 
-      </article>
-      {{/each}}
+        </article>
+        {{/each}}
+      </div>
 
     </div>
 
