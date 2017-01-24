@@ -116,3 +116,5 @@
   @include cover-background("/img/home/contact.png");
   @include opacity(rgba(255, 255, 255, 0.5));
 }
+
+@import 'responsive_home';
