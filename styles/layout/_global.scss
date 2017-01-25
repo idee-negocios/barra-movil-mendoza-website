@@ -38,17 +38,34 @@ a:hover, button:hover {
   }
 }
 
-// Columns
-$columns: 10;
+// Row and columns
+.row {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
 
-@for $i from 1 through $columns {
-  $width: percentage(1 / $i);
+@include columns();
 
-  .col-#{$i} {
-    box-sizing: border-box;
-    float: left;
-    width: $width;
-  }
+@include mobile {
+  @include columns('mobile');
+}
+
+@include tablet {
+  @include columns('tablet');
+}
+
+// Ofsets
+@include desktop {
+  @include center-columns();
+}
+
+@include mobile {
+  @include center-columns('mobile');
+}
+
+@include tablet {
+  @include center-columns('tablet');
 }
 
 // Utils

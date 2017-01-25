@@ -5,12 +5,13 @@
   @include opacity(rgba(0, 0, 0, 0.2));
 
   .content {
-    padding: 12rem 4rem 4rem 4rem;
+    padding: 12rem 5rem 4rem 5rem;
 
     .item {
       padding: 1rem;
       color: #fff;
-      line-height: 1.5;
+      line-height: 1.8;
+      text-align: justify;
     }
 
     .bottom-item {
@@ -23,13 +24,12 @@
         padding: 1.5rem 0;
         border-top: 2px solid #555;
         border-bottom: 2px solid #555;
-        margin: 0 30% 2rem 30%;
         font-size: 2rem;
-
+        margin-bottom: 2rem;
       }
 
       p {
-        margin-bottom: 0.3rem;
+        margin-bottom: 0.5rem;
       }
 
       button {
@@ -45,16 +45,6 @@
         }
       }
     }
-
-    // .col-3 {
-    //   float: left;
-    //   width: 33.33%;
-    // }
-
-    // .col-12 {
-    //   float: left;
-    //   width: 100%;
-    // }
   }
 }
 
