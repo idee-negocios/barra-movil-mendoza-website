@@ -1,0 +1,68 @@
+.patio-cervecero-header {
+  @extend .ab-header;
+
+  @include cover-background("/img/patio-cervecero/header.png");
+  @include opacity(rgba(0, 0, 0, 0.2));
+
+  .content {
+    padding: 12rem 4rem 4rem 4rem;
+
+    .item {
+      padding: 1rem;
+      color: #fff;
+      line-height: 1.5;
+    }
+
+    .bottom-item {
+      color: #fff;
+      margin-top: 3rem;
+      text-align: center;
+      padding: 2rem 0;
+
+      h1 {
+        padding: 1.5rem 0;
+        border-top: 2px solid #555;
+        border-bottom: 2px solid #555;
+        margin: 0 30% 2rem 30%;
+        font-size: 2rem;
+
+      }
+
+      p {
+        margin-bottom: 0.3rem;
+      }
+
+      button {
+        padding: 0.5rem 1rem;
+        border: 2px solid #555;
+        border-radius: 5px;
+        background: none;
+        color: #fff;
+        font-weight: 600;
+
+        &:hover {
+          box-shadow: inset 0 0 5px #555;
+        }
+      }
+    }
+
+    // .col-3 {
+    //   float: left;
+    //   width: 33.33%;
+    // }
+
+    // .col-12 {
+    //   float: left;
+    //   width: 100%;
+    // }
+  }
+}
+
+.patio-cervecero-contact {
+  @extend .ab-contact;
+
+  @include cover-background("/img/patio-cervecero/contact.png");
+  @include opacity(rgba(255, 255, 255, 0.5));
+}
+
+@import 'responsive_patio-cervecero';

@@ -4,6 +4,8 @@
   @include cover-background("/img/home/header.png");
   @include opacity(rgba(0, 0, 0, 0.6));
 
+  height: 100vh;
+
   .content {
     .body {
       color: #fff;

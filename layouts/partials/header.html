@@ -13,6 +13,7 @@
 
       <ul class="navbar">
         {{#each pages}}
+        <!-- {{url}} -->
         <li class="navbar-item {{#ifCond this.url '==' ../url}}active{{/ifCond}}">
           <a href="{{this.url}}">
             <span>

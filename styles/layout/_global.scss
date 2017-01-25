@@ -1,3 +1,4 @@
+// Global
 body {
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
@@ -16,12 +17,14 @@ a:hover, button:hover {
   cursor: pointer;
 }
 
+// Section
 .section {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
 
+// Center
 .vertical-container {
   display: table;
   height: 100%;
@@ -35,6 +38,20 @@ a:hover, button:hover {
   }
 }
 
+// Columns
+$columns: 10;
+
+@for $i from 1 through $columns {
+  $width: percentage(1 / $i);
+
+  .col-#{$i} {
+    box-sizing: border-box;
+    float: left;
+    width: $width;
+  }
+}
+
+// Utils
 .clearfix {
   clear: both;
 }

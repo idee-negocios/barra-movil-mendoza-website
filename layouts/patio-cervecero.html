@@ -1,0 +1,30 @@
+{{#extend "default"}}
+
+  {{#content "header-content"}}
+  <section class="content">
+
+    {{#each items}}
+    <article class="item col-3">
+      {{{this.text}}}
+    </article>
+    {{/each}}
+
+    <article class="bottom-item col-1">
+      <h1>JOHN JARANA</h1>
+      <p>
+        Lleva los barmans y las mozas
+      </p>
+      <button id="patio-cervecero-btn">PEDÍ TU PRESUPUESTO Y RESERVALO EN MENDIZA</button>
+    </article>
+
+    <div class="clearfix"></div>
+
+  </section>
+  {{/content}}
+
+  {{#content "main"}}
+  <section class="{{prefix}}-section">
+  </section>
+  {{/content}}
+
+{{/extend}}
