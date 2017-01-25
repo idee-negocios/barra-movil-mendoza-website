@@ -55,10 +55,7 @@
 
     <div class="content">
       <div class="row">
-        <article class="col-2 col-center-2 col-mobile-1 col-tablet-1">
-
-          <img class="left-icon" alt="Left icon" src="{{assets.img}}/{{prefix}}/top-left-leaf.png" />
-          <img class="right-icon" alt="Right icon" src="{{assets.img}}/{{prefix}}/top-right-leaf.png" />
+        <div class="col-2 col-center-2 col-mobile-1 col-tablet-1">
 
           <header>
             <h1>CARTA DE TRAGOS - CUMPLEAÑOS DE 15 - PRIMERA LÍNEA</h1>
@@ -66,25 +63,21 @@
 
           <span class="separator"></span>
 
-          <p>
-            Para que los más chicos puedan disfrutar de tragos, licuados y
-            batidos, <strong>JOHN JARANITA</strong> se encarga de prepararte la
-            barra de tragos sin alcohol para fiestas de cumpleaños, juntada
-            entre amigos, por el día del niño o lo que necesites en Mendoza.
-          </p>
-          <p>
-            <blockquote>
-              Tranquilo que también hay tragos para los más grandes, pero eso
-              queda entre nosotros.
-            </blockquote>
-          </p>
-          <p>
-            Tragos con <strong>frutas, batidos con helado, daikiris sin
-            alcohol</strong>, son algunos de los tragos que van a poder elegir
-            los invitados con el alquiler de esta barra móvil.
-          </p>
+          {{#each menues}}
+          <article class="menu">
 
-        </article>
+            <h2>{{this.name}}</h2>
+
+            {{#each this.items}}
+            <p><strong>{{this.name}}</strong>: {{this.description}}</p>
+            {{/each}}
+
+          </article>
+          {{/each}}
+
+          <img class="left-icon" alt="Left icon" src="{{assets.img}}/{{prefix}}/top-left-leaf.png" />
+          <img class="right-icon" alt="Right icon" src="{{assets.img}}/{{prefix}}/top-right-leaf.png" />
+        </div>
       </div>
     </div>
 

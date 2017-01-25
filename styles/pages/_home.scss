@@ -7,12 +7,18 @@
   height: 100vh;
 
   .content {
+    position: absolute;
+    bottom: 25%;
+    text-align: center;
+
     .body {
       color: #fff;
       margin-bottom: 3rem;
+      padding: 0 1rem;
 
       h1 {
         font-size: 1.6rem;
+        line-height: 1.5;
         margin: 0;
       }
     }
@@ -118,5 +124,3 @@
   @include cover-background("/img/home/contact.png");
   @include opacity(rgba(255, 255, 255, 0.5));
 }
-
-@import 'responsive_home';
