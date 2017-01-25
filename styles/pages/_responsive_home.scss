@@ -1,0 +1,28 @@
+@include mobile {
+  .home-section {
+    .main-items {
+      .item-container {
+        .item {
+          float: none;
+          width: 100%;
+
+          .body {
+            padding-left: 1rem;
+            padding-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile-and-tablet {
+  .home-section {
+    .main-items {
+      .item-container {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+}
