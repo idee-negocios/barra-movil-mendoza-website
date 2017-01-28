@@ -1,7 +1,5 @@
-.barra-sin-alcohol-header {
-  @extend .ab-header;
-
-  @include cover-background("/img/barra-sin-alcohol/header.png");
+.eventos-empresariales-header {
+  @include cover-background("/img/eventos-empresariales/header.png");
 
   height: 100vh;
 
@@ -10,96 +8,43 @@
     bottom: 25%;
     width: 100%;
 
-    article {
-      color: #fff;
-      text-align: center;
+    .title-container {
+      padding: 0 1rem;
 
-      h1, h2 {
+      h1, h2, h3 {
+        text-align: center;
         line-height: 1.5;
       }
 
       h1 {
         color: #fff;
         font-size: 2rem;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
       }
 
       h2 {
-        color: #aaa;
-        font-size: 1.5rem;
-      }
-    }
-  }
-}
-
-.barra-sin-alcohol-top-section {
-  @include cover-background("/img/barra-sin-alcohol/main.png");
-
-  padding: 12rem 0;
-
-  .content {
-    padding: 0 2rem;
-
-    article {
-      position: relative;
-
-      p {
-        color: #fff;
-        line-height: 1.2;
+        color: #eee;
+        font-size: 1rem;
         margin-bottom: 1rem;
-        font-size: 1.2rem;
-        text-align: justify;
-
-        &:last-child {
-          margin: 0;
-        }
       }
 
-      blockquote {
+      h3 {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        border: 2px solid #aaa;
+        border-radius: 10px;
+        background: none;
         color: #fff;
-        font-size: 1.1rem;
-        font-weight: 600;
-        line-height: 1.1;
-        text-align: center;
-        padding: 1rem;
-        font-style: italic;
 
-        &:before {
-          content: '\00ab';
-          font-weight: 400;
+        &:hover {
+          box-shadow: inset 0 0 5px #555;
         }
-
-        &:after {
-          content: '\00bb';
-          font-weight: 400;
-        }
-      }
-
-      &:before, &:after {
-        font-family: 'FontAwesome';
-        font-size: 1.8rem;
-        color: #fff;
-        text-shadow: 1px 1px #000;
-        position: absolute;
-      }
-
-      &:before {
-        content: '\f10d';
-        top: 0;
-        left: -2rem;
-      }
-
-      &:after {
-        content: '\f10e';
-        bottom: 0;
-        right: -2rem;
       }
     }
-
   }
 }
 
-.barra-sin-alcohol-main-section {
+.eventos-empresariales-section {
   padding: 5rem 0;
   position: relative;
 
@@ -162,8 +107,6 @@
   }
 }
 
-.barra-sin-alcohol-contact {
-  @extend .ab-contact;
-
-  @include cover-background("/img/barra-sin-alcohol/contact.png");
+.eventos-empresariales-contact {
+  @include cover-background("/img/eventos-empresariales/contact.png");
 }
