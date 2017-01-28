@@ -1,0 +1,104 @@
+{{#extend "default"}}
+
+  {{#content "header-content"}}
+  <section class="content">
+
+    <div class="row">
+      <div class="col-6 col-offset-3 col-mobile-12 col-tablet-10 col-tablet-offset-1">
+        <div class="title-container">
+          <h1>
+            LOS MEJORES BARMANS HACEN LOS MEJORES TRAGOS
+            Y <strong>JOHN JARANA</strong> TE LOS SIRVE EN BANDEJA EN MENDOZA
+          </h1>
+          <h2>
+            Esta es la barra móvil de tragos ideal para tu casamiento,
+            cumpleaños de mayoría de edad o eventos familiares más formales.
+            Encontrá los tragos que más te gusten aprovechando la opción de
+            create tu carta de tragos personalizada.
+          </h2>
+          <h3>
+            Preparamos los mejores mojitos de Mendoza, daikiris, gancia batido y
+            muchos tragos más. Hacé que tu fiesta de casamiento de qué hablar.
+          </h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+  </section>
+  {{/content}}
+
+  {{#content "main"}}
+  <section class="{{prefix}}-section">
+
+    <div class="content">
+      <div class="row">
+        <div class="col-6 col-offset-3 col-mobile-12 col-tablet-10 col-tablet-offset-1">
+
+          <header>
+            <h1>CARTA DE TRAGOS - EVENTOS EMPRESARIALES - PRIMERA LÍNEA</h1>
+          </header>
+
+          <span class="separator"></span>
+
+          {{#each drinks}}
+          <article class="menu">
+
+            <h2>{{this.name}}</h2>
+
+            {{#each this.items}}
+            <p><strong>{{this.name}}</strong>: {{this.description}}</p>
+            {{/each}}
+
+          </article>
+          {{/each}}
+
+          <img class="left-icon" alt="Left icon" src="{{assets.img}}/{{prefix}}/top-left-leaf.png" />
+          <img class="right-icon" alt="Right icon" src="{{assets.img}}/{{prefix}}/top-right-leaf.png" />
+        </div>
+      </div>
+    </div>
+
+    <div class="clearfix">
+
+    </div>
+  </section>
+
+  <section class="{{prefix}}-section">
+
+    <div class="content">
+      <div class="row">
+        <div class="col-6 col-offset-3 col-mobile-12 col-tablet-10 col-tablet-offset-1">
+
+          <header>
+            <h1>CARTA DE TRAGOS - CUMPLEAÑOS DE 15 - LÍNEA PREMIUM</h1>
+          </header>
+
+          <span class="separator"></span>
+
+          {{#each premium-drinks}}
+          <article class="menu">
+
+            <h2>{{this.name}}</h2>
+
+            {{#each this.items}}
+            <p><strong>{{this.name}}</strong>: {{this.description}}</p>
+            {{/each}}
+
+          </article>
+          {{/each}}
+
+          <img class="left-icon" alt="Left icon" src="{{assets.img}}/{{prefix}}/top-left-leaf.png" />
+          <img class="right-icon" alt="Right icon" src="{{assets.img}}/{{prefix}}/top-right-leaf.png" />
+        </div>
+      </div>
+    </div>
+
+    <div class="clearfix">
+
+    </div>
+  </section>
+  {{/content}}
+
+{{/extend}}
