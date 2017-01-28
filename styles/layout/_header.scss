@@ -1,4 +1,6 @@
 .ab-header {
+  @extend .section;
+
   position: relative;
 
   .menu {

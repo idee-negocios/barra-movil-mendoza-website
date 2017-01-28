@@ -1,6 +1,4 @@
 .patio-cervecero-header {
-  @extend .ab-header;
-
   @include cover-background("/img/patio-cervecero/header.png");
   @include opacity(rgba(0, 0, 0, 0.2));
 
@@ -49,8 +47,6 @@
 }
 
 .patio-cervecero-contact {
-  @extend .ab-contact;
-
   @include cover-background("/img/patio-cervecero/contact.png");
   @include opacity(rgba(255, 255, 255, 0.5));
 }

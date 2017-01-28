@@ -1,4 +1,6 @@
-.footer {
+.ab-footer {
+  @extend .section;
+
   background-color: #555;
   color: #fff;
 
