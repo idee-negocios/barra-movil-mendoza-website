@@ -1,15 +1,13 @@
 // Variables
 @import "variables";
 @import "mixins";
+@import "grid";
 
 // Structure
 @import "layout/global";
 @import "layout/header";
 @import "layout/contact";
 @import "layout/footer";
-
-// Components
-@import "components/buttons";
 
 // Pages
 @import "pages/home";

@@ -1,0 +1,20 @@
+@include mobile-and-tablet {
+  .barra-sin-alcohol-header {
+    .content {
+      bottom: 15%;
+
+      article {
+        padding: 0 1rem;
+        h1, h2 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .barra-sin-alcohol-main-section {
+    .left-icon, .right-icon {
+      display: none;
+    }
+  }
+}

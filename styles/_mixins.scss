@@ -49,11 +49,11 @@ $desktop-width: 1024px;
 }
 
 // Columns
-$columns: 10;
+$columns: 12;
 
 @mixin columns($name-suffix: null) {
   @for $i from 1 through $columns {
-    $width: percentage(1 / $i);
+    $width: percentage($i / $columns);
     $name: '.col-';
 
     @if $name-suffix != null {
@@ -68,16 +68,16 @@ $columns: 10;
   }
 }
 
-@mixin center-columns($name-suffix: null) {
+@mixin columns-offset($name-suffix: null) {
   @for $i from 1 through $columns {
-    $margin: percentage((1 - (1 / $i)) / 2);
+    $margin: percentage($i / $columns);
     $name: '.col-';
 
     @if $name-suffix != null {
       $name: $name + $name-suffix + '-';
     }
 
-    $name: $name + 'center-';
+    $name: $name + 'offset-';
 
     #{$name}#{$i} {
       margin-left: $margin;

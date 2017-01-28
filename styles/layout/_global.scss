@@ -37,36 +37,6 @@ a:hover, button:hover {
   }
 }
 
-// Row and columns
-.row {
-  width: 100%;
-  display: block;
-  overflow: hidden;
-}
-
-@include columns();
-
-@include mobile {
-  @include columns('mobile');
-}
-
-@include tablet {
-  @include columns('tablet');
-}
-
-// Ofsets
-@include desktop {
-  @include center-columns();
-}
-
-@include mobile {
-  @include center-columns('mobile');
-}
-
-@include tablet {
-  @include center-columns('tablet');
-}
-
 // Utils
 .clearfix {
   clear: both;
