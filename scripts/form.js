@@ -6,6 +6,9 @@ export function init() {
   // submit form
   contactFormEl.submit((e) => {
     e.preventDefault();
+
+    // Submit to Firebase
+    // ...
   });
 
   // message textarea

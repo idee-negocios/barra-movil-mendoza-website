@@ -5,6 +5,6 @@ build
 sources/assets/*.js
 sources/assets/*.css
 sources/vendor
-sources/img
 
 .tmp
+docs

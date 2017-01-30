@@ -54,6 +54,7 @@
     "webpack": "^1.14.0"
   },
   "dependencies": {
+    "blazy": "^1.8.2",
     "jquery": "^2.1.4"
   }
 }
