@@ -9,7 +9,7 @@ function onlyFilenames(arr) {
 }
 
 // Paths
-const prefix = process.env.PREFIX ? join('/', process.env.PREFIX) : '/'; // can be set from package.json
+const root = process.env.ROOT ? join('/', process.env.ROOT) : '/'; // must be set in console
 const img = 'img';
 const icons = join(img, 'icons');
 
@@ -24,23 +24,23 @@ const pages = [
   {url: '/eventos-empresariales.html', name: 'Eventos empresariales'},
   {url: '/bodas-y-fiestas.html', name: 'Bodas y fiestas'}
 ].map(p => {
-  p.url = join(prefix, p.url);
+  p.url = join(root, p.url);
   return p;
 });
 
 module.exports = {
   site: {
-    root: "/",
+    root,
     url: "https://barrasmovilesmendoza.com.ar",
     title: "John Jarana",
     author: "Alan Boglioli",
     logo: 'logo.png'
   },
   assets: {
-    img: join(prefix, img),
-    icons: join(prefix, icons),
-    scripts: join(prefix, scripts),
-    styles: join(prefix, styles)
+    img: join(root, img),
+    icons: join(root, icons),
+    scripts: join(root, scripts),
+    styles: join(root, styles)
   },
   files: {
     brandIcons: onlyFilenames(globby.sync(['./sources/img/icons/brands/*']))
