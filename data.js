@@ -9,7 +9,7 @@ function onlyFilenames(arr) {
 }
 
 // Paths
-const prefix = process.env.PREFIX || '/'; // can be set from package.json
+const prefix = process.env.PREFIX ? join('/', process.env.PREFIX) : '/'; // can be set from package.json
 const img = 'img';
 const icons = join(img, 'icons');
 
