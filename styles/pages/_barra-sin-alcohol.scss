@@ -1,6 +1,4 @@
 .barra-sin-alcohol-header {
-  @include cover-background("/img/barra-sin-alcohol/header.png");
-
   height: 100vh;
 
   .content {
@@ -31,7 +29,7 @@
 }
 
 .barra-sin-alcohol-top-section {
-  @include cover-background("/img/barra-sin-alcohol/main.png");
+  @include cover-background;
 
   padding: 12rem 0;
 
@@ -161,5 +159,5 @@
 }
 
 .barra-sin-alcohol-contact {
-  @include cover-background("/img/barra-sin-alcohol/contact.png");
+  @include cover-background;
 }

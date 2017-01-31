@@ -1,6 +1,4 @@
 .bodas-y-fiestas-header {
-  @include cover-background("/img/bodas-y-fiestas/header.png");
-
   height: 100vh;
 
   .content {
@@ -105,8 +103,4 @@
   .right-icon {
     right: 0;
   }
-}
-
-.bodas-y-fiestas-contact {
-  @include cover-background("/img/bodas-y-fiestas/contact.png");
 }

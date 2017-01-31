@@ -1,5 +1,6 @@
 .ab-header {
   @extend .section;
+  @include cover-background;
 
   .menu {
     background: rgba(0, 0, 0, 0.5);

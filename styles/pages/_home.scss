@@ -1,6 +1,5 @@
 .home-header {
-  @include cover-background("/img/home/header.png");
-  @include opacity(rgba(0, 0, 0, 0.6));
+  @include opacity(rgba(0, 0, 0, 0.8));
 
   height: 100vh;
 
@@ -41,7 +40,7 @@
 }
 
 .home-section {
-  @include cover-background("/img/home/main.png");
+  @include cover-background;
   @include opacity(rgba(255, 255, 255, 0.2));
 
   .main-header {
@@ -124,6 +123,5 @@
 }
 
 .home-contact {
-  @include cover-background("/img/home/contact.png");
   @include opacity(rgba(255, 255, 255, 0.5));
 }

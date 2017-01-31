@@ -1,5 +1,6 @@
 .ab-contact {
   @extend .section;
+  @include cover-background;
 
   padding: 3rem 0;
   text-align: center;

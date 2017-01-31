@@ -1,6 +1,4 @@
 .eventos-empresariales-header {
-  @include cover-background("/img/eventos-empresariales/header.png");
-
   height: 100vh;
 
   .content {
@@ -105,8 +103,4 @@
   .right-icon {
     right: 0;
   }
-}
-
-.eventos-empresariales-contact {
-  @include cover-background("/img/eventos-empresariales/contact.png");
 }
