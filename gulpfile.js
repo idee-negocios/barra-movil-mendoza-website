@@ -6,6 +6,8 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var cleanCSS = require('gulp-clean-css');
+var changed = require('gulp-changed');
+var imagemin = require('gulp-imagemin');
 
 var Metalsmith = require('metalsmith');
 
@@ -69,12 +71,15 @@ function setupMetalsmith(callback) {
   });
 }
 
-//Gulp tasks
-
+/**
+ * Gulp tasks
+ */
+// Metalsmith
 gulp.task('metalsmith', function(callback) {
   setupMetalsmith(callback);
 });
 
+// Vendor
 gulp.task('vendor-scripts', function() {
   return gulp.src(config.vendor.scripts)
     .pipe(concat('vendor.js'))
@@ -91,6 +96,7 @@ gulp.task('vendor-styles', function() {
 
 gulp.task('vendor', ['vendor-scripts', 'vendor-styles']);
 
+// Styles
 gulp.task('styles', function() {
   return gulp.src(path.join(__dirname, config.metalsmith.config.styleRoot, 'app.scss'))
     .pipe(sass({
@@ -163,8 +169,10 @@ gulp.task('webpack', function(callback) {
   });
 });
 
+// Scripts
 gulp.task('scripts', ['webpack']);
 
+// Watch
 gulp.task('watch', ['default'], function() {
   gulp.watch(['gulpfile.js', 'config.js'], ['default']);
   gulp.watch([config.metalsmith.config.styleRoot+'/**/*'], ['styles']);
@@ -188,7 +196,7 @@ gulp.task('server', ['default', 'watch'], function(callback) {
   var server = http.createServer(function(req, res){
     var done = finalhandler(req, res);
     serve(req, res, done);
-  })
+  });
 
   var serverPort = 4000;
   if (argv.port) {
@@ -201,4 +209,14 @@ gulp.task('server', ['default', 'watch'], function(callback) {
   });
 });
 
-gulp.task('default', ['vendor', 'scripts', 'styles', 'metalsmith']);
+gulp.task('images', function() {
+  var imageSrc = './images/**/*';
+  var imageDst = './sources/img';
+
+  gulp.src(imageSrc)
+    .pipe(changed(imageDst))
+    .pipe(imagemin())
+    .pipe(gulp.dest(imageDst));
+});
+
+gulp.task('default', ['vendor', 'scripts', 'styles', 'images', 'metalsmith']);
