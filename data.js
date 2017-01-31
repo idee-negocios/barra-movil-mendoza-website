@@ -1,4 +1,5 @@
 const globby = require('globby');
+const join = require('path').join;
 
 function onlyFilenames(arr) {
   return arr.map(el =>
@@ -6,6 +7,23 @@ function onlyFilenames(arr) {
                  ? el
                  : el.substring(el.lastIndexOf('/') + 1, el.length));
 }
+
+// Paths
+const prefix = process.env.PREFIX || '/'; // can be set from package.json
+const img = 'img';
+const icons = join(img, 'icons');
+
+// Pages
+const pages = [
+  {url: '/', name: 'Inicio'},
+  {url: '/patio-cervecero.html', name: 'Patio cervecero'},
+  {url: '/barra-sin-alcohol.html', name: 'Barra sin alcohol'},
+  {url: '/eventos-empresariales.html', name: 'Eventos empresariales'},
+  {url: '/bodas-y-fiestas.html', name: 'Bodas y fiestas'}
+].map(p => {
+  p.url = join(prefix, p.url);
+  return p;
+});
 
 module.exports = {
   site: {
@@ -16,19 +34,13 @@ module.exports = {
     logo: 'logo.png'
   },
   assets: {
-    img: "/img",
-    icons: "/img/icons"
+    img: join(prefix, img),
+    icons: join(prefix, icons)
   },
   files: {
     brandIcons: onlyFilenames(globby.sync(['./sources/img/icons/brands/*']))
   },
-  pages: [
-    {url: '/', name: 'Inicio'},
-    {url: '/patio-cervecero.html', name: 'Patio cervecero'},
-    {url: '/barra-sin-alcohol.html', name: 'Barra sin alcohol'},
-    {url: '/eventos-empresariales.html', name: 'Eventos empresariales'},
-    {url: '/bodas-y-fiestas.html', name: 'Bodas y fiestas'}
-  ],
+  pages,
   contact: [
     {icon: 'phone', text: 'johnjarana@gmail.com'},
     {icon: 'envelope', text: '555 5555'},

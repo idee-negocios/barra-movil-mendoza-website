@@ -19,7 +19,8 @@
     "build": "./node_modules/.bin/gulp --production --build",
     "watch": "./node_modules/.bin/gulp watch",
     "vendor": "./node_modules/.bin/gulp vendor",
-    "gulp": "./node_modules/.bin/gulp"
+    "gulp": "./node_modules/.bin/gulp",
+    "build.gh-page": "PREFIX='/john-jarana-website' npm run build"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
