@@ -20,7 +20,7 @@
     "watch": "./node_modules/.bin/gulp watch",
     "vendor": "./node_modules/.bin/gulp vendor",
     "gulp": "./node_modules/.bin/gulp",
-    "build.gh-page": "PREFIX='/john-jarana-website' npm run build"
+    "deploy.gh-page": "PREFIX='/john-jarana-website' npm run build && git subtree push --prefix build origin gh-pages"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",

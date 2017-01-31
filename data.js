@@ -13,6 +13,9 @@ const prefix = process.env.PREFIX || '/'; // can be set from package.json
 const img = 'img';
 const icons = join(img, 'icons');
 
+const scripts = 'assets';
+const styles = 'assets';
+
 // Pages
 const pages = [
   {url: '/', name: 'Inicio'},
@@ -35,7 +38,9 @@ module.exports = {
   },
   assets: {
     img: join(prefix, img),
-    icons: join(prefix, icons)
+    icons: join(prefix, icons),
+    scripts: join(prefix, scripts),
+    styles: join(prefix, styles)
   },
   files: {
     brandIcons: onlyFilenames(globby.sync(['./sources/img/icons/brands/*']))
