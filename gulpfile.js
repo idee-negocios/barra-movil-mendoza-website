@@ -6,6 +6,7 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var cleanCSS = require('gulp-clean-css');
+var changed = require('gulp-changed');
 var imagemin = require('gulp-imagemin');
 
 var Metalsmith = require('metalsmith');
@@ -209,11 +210,13 @@ gulp.task('server', ['default', 'watch'], function(callback) {
 });
 
 gulp.task('images', function() {
-  if(args.production) {
-    gulp.src('./images/**/*')
-      .pipe(imagemin())
-      .pipe(gulp.dest('./sources/img'));
-  }
+  var imageSrc = './images/**/*';
+  var imageDst = './sources/img';
+
+  gulp.src(imageSrc)
+    .pipe(changed(imageDst))
+    .pipe(imagemin())
+    .pipe(gulp.dest(imageDst));
 });
 
 gulp.task('default', ['vendor', 'scripts', 'styles', 'images', 'metalsmith']);

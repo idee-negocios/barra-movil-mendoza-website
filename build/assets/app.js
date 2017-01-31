@@ -1,1 +1,520 @@
-webpackJsonp([0],[function(t,e,o){"use strict";function n(t){if(t&&t.__esModule)return t;var e={};if(null!=t)for(var o in t)Object.prototype.hasOwnProperty.call(t,o)&&(e[o]=t[o]);return e.default=t,e}function i(t){return t&&t.__esModule?t:{default:t}}var s=o(1),r=i(s),c=o(2),a=n(c),l=o(3),u=n(l),f=o(4),d=n(f);(0,r.default)(document).ready(function(){a.init(),u.init(),d.init()})},,function(t,e,o){(function(t){"use strict";function o(){var e=t(".navbar"),o=t(".menu > .icon"),n=t("#toggle-navbar"),i=!0;n.click(function(t){i?o.slideToggle(500,function(){e.slideToggle()}):e.slideToggle(500,function(){o.slideToggle()}),i=!i})}Object.defineProperty(e,"__esModule",{value:!0}),e.init=o}).call(e,o(1))},function(t,e,o){(function(t){"use strict";function o(){var e=t("#mensaje"),o=t("#contact-form");o.submit(function(t){t.preventDefault()}),e.focus(function(){var t=e;"Mensaje"===t.val()&&t.val("")}),t("#mensaje").blur(function(){var t=e;""===t.val()&&t.val("Mensaje")})}Object.defineProperty(e,"__esModule",{value:!0}),e.init=o}).call(e,o(1))},function(t,e,o){"use strict";function n(t){return t&&t.__esModule?t:{default:t}}function i(){new r.default({offset:100,success:function(t){console.log("Image loaded!")},error:function(t,e){console.log(e)}})}Object.defineProperty(e,"__esModule",{value:!0}),e.init=i;var s=o(5),r=n(s)},function(t,e,o){var n,i;!function(s,r){n=r,i="function"==typeof n?n.call(e,o,e,t):n,!(void 0!==i&&(t.exports=i))}(this,function(){"use strict";function t(t){var o=t._util;o.elements=v(t.options),o.count=o.elements.length,o.destroyed&&(o.destroyed=!1,t.options.container&&w(t.options.container,function(t){g(t,"scroll",o.validateT)}),g(window,"resize",o.saveViewportOffsetT),g(window,"resize",o.validateT),g(window,"scroll",o.validateT)),e(t)}function e(t){for(var e=t._util,n=0;n<e.count;n++){var i=e.elements[n];(o(i,t.options)||d(i,t.options.successClass))&&(t.load(i),e.elements.splice(n,1),e.count--,n--)}0===e.count&&t.destroy()}function o(t,e){var o=t.getBoundingClientRect();if(e.container&&_){var i=t.closest(e.containerClass);if(i){var s=i.getBoundingClientRect();if(n(s,T)){var r=s.top-e.offset,c=s.right+e.offset,a=s.bottom+e.offset,l=s.left-e.offset,u={top:r>T.top?r:T.top,right:c<T.right?c:T.right,bottom:a<T.bottom?a:T.bottom,left:l>T.left?l:T.left};return n(o,u)}return!1}}return n(o,T)}function n(t,e){return t.right>=e.left&&t.bottom>=e.top&&t.left<=e.right&&t.top<=e.bottom}function i(t,e,o){if(!d(t,o.successClass)&&(e||o.loadInvisible||t.offsetWidth>0&&t.offsetHeight>0)){var n=l(t,y)||l(t,o.src);if(n){var i=n.split(o.separator),a=i[C&&i.length>1?1:0],u=l(t,o.srcset),v=f(t,"img"),m=t.parentNode,b=m&&f(m,"picture");if(v||void 0===t.src){var T=new Image,_=function(){o.error&&o.error(t,"invalid"),p(t,o.errorClass),h(T,"error",_),h(T,"load",k)},k=function(){v?b||c(t,a,u):t.style.backgroundImage='url("'+a+'")',s(t,o),h(T,"load",k),h(T,"error",_)};b&&(T=t,w(m.getElementsByTagName("source"),function(t){r(t,O,o.srcset)})),g(T,"error",_),g(T,"load",k),c(T,a,u)}else t.src=a,s(t,o)}else f(t,"video")?(w(t.getElementsByTagName("source"),function(t){r(t,E,o.src)}),t.load(),s(t,o)):(o.error&&o.error(t,"missing"),p(t,o.errorClass))}}function s(t,e){p(t,e.successClass),e.success&&e.success(t),u(t,e.src),u(t,e.srcset),w(e.breakpoints,function(e){u(t,e.src)})}function r(t,e,o){var n=l(t,o);n&&(a(t,e,n),u(t,o))}function c(t,e,o){o&&a(t,O,o),t.src=e}function a(t,e,o){t.setAttribute(e,o)}function l(t,e){return t.getAttribute(e)}function u(t,e){t.removeAttribute(e)}function f(t,e){return t.nodeName.toLowerCase()===e}function d(t,e){return(" "+t.className+" ").indexOf(" "+e+" ")!==-1}function p(t,e){d(t,e)||(t.className+=" "+e)}function v(t){for(var e=[],o=t.root.querySelectorAll(t.selector),n=o.length;n--;e.unshift(o[n]));return e}function m(t){T.bottom=(window.innerHeight||document.documentElement.clientHeight)+t,T.right=(window.innerWidth||document.documentElement.clientWidth)+t}function g(t,e,o){t.attachEvent?t.attachEvent&&t.attachEvent("on"+e,o):t.addEventListener(e,o,{capture:!1,passive:!0})}function h(t,e,o){t.detachEvent?t.detachEvent&&t.detachEvent("on"+e,o):t.removeEventListener(e,o,{capture:!1,passive:!0})}function w(t,e){if(t&&e)for(var o=t.length,n=0;n<o&&e(t[n],n)!==!1;n++);}function b(t,e,o){var n=0;return function(){var i=+new Date;i-n<e||(n=i,t.apply(o,arguments))}}var y,T,C,_,E="src",O="srcset";return function(o){if(!document.querySelectorAll){var n=document.createStyleSheet();document.querySelectorAll=function(t,e,o,i,s){for(s=document.all,e=[],t=t.replace(/\[for\b/gi,"[htmlFor").split(","),o=t.length;o--;){for(n.addRule(t[o],"k:v"),i=s.length;i--;)s[i].currentStyle.k&&e.push(s[i]);n.removeRule(0)}return e}}var s=this,r=s._util={};r.elements=[],r.destroyed=!0,s.options=o||{},s.options.error=s.options.error||!1,s.options.offset=s.options.offset||100,s.options.root=s.options.root||document,s.options.success=s.options.success||!1,s.options.selector=s.options.selector||".b-lazy",s.options.separator=s.options.separator||"|",s.options.containerClass=s.options.container,s.options.container=!!s.options.containerClass&&document.querySelectorAll(s.options.containerClass),s.options.errorClass=s.options.errorClass||"b-error",s.options.breakpoints=s.options.breakpoints||!1,s.options.loadInvisible=s.options.loadInvisible||!1,s.options.successClass=s.options.successClass||"b-loaded",s.options.validateDelay=s.options.validateDelay||25,s.options.saveViewportOffsetDelay=s.options.saveViewportOffsetDelay||50,s.options.srcset=s.options.srcset||"data-srcset",s.options.src=y=s.options.src||"data-src",_=Element.prototype.closest,C=window.devicePixelRatio>1,T={},T.top=0-s.options.offset,T.left=0-s.options.offset,s.revalidate=function(){t(s)},s.load=function(t,e){var o=this.options;t&&void 0===t.length?i(t,e,o):w(t,function(t){i(t,e,o)})},s.destroy=function(){var t=s._util;s.options.container&&w(s.options.container,function(e){h(e,"scroll",t.validateT)}),h(window,"scroll",t.validateT),h(window,"resize",t.validateT),h(window,"resize",t.saveViewportOffsetT),t.count=0,t.elements.length=0,t.destroyed=!0},r.validateT=b(function(){e(s)},s.options.validateDelay,s),r.saveViewportOffsetT=b(function(){m(s.options.offset)},s.options.saveViewportOffsetDelay,s),m(s.options.offset),w(s.options.breakpoints,function(t){if(t.width>=window.screen.width)return y=t.src,!1}),setTimeout(function(){t(s)})}})}]);
+webpackJsonp([0],[
+/* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _jquery = __webpack_require__(1);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _navbar = __webpack_require__(2);
+
+	var Navbar = _interopRequireWildcard(_navbar);
+
+	var _form = __webpack_require__(3);
+
+	var Form = _interopRequireWildcard(_form);
+
+	var _images = __webpack_require__(4);
+
+	var Images = _interopRequireWildcard(_images);
+
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	(0, _jquery2.default)(document).ready(function () {
+	  Navbar.init();
+	  Form.init();
+	  Images.init();
+	});
+
+/***/ },
+/* 1 */,
+/* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.init = init;
+	function init() {
+	  var navbarEl = $('.navbar');
+	  var iconEl = $('.menu > .icon');
+	  var buttonEl = $('#toggle-navbar');
+
+	  var navbarClosed = true;
+
+	  buttonEl.click(function (_) {
+	    if (navbarClosed) {
+	      // iconEl.slideToggle('fast', _ => {
+	      //   navbarEl.slideToggle('fast');
+	      // });
+
+	      iconEl.slideToggle(500, function () {
+	        navbarEl.slideToggle();
+	      });
+	    } else {
+	      // navbarEl.slideToggle('fast', () => {
+	      //   iconEl.slideToggle('fast');
+	      // });
+	      navbarEl.slideToggle(500, function () {
+	        iconEl.slideToggle();
+	      });
+	    }
+
+	    navbarClosed = !navbarClosed;
+	  });
+	}
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ },
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.init = init;
+	function init() {
+	  // elements
+	  var messageEl = $('#mensaje');
+	  var contactFormEl = $('#contact-form');
+
+	  // submit form
+	  contactFormEl.submit(function (e) {
+	    e.preventDefault();
+
+	    // Submit to Firebase
+	    // ...
+	  });
+
+	  // message textarea
+	  messageEl.focus(function () {
+	    var el = messageEl;
+	    if (el.val() === 'Mensaje') {
+	      el.val('');
+	    }
+	  });
+
+	  $('#mensaje').blur(function () {
+	    var el = messageEl;
+	    if (el.val() === '') {
+	      el.val('Mensaje');
+	    }
+	  });
+	}
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ },
+/* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.init = init;
+
+	var _blazy = __webpack_require__(5);
+
+	var _blazy2 = _interopRequireDefault(_blazy);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function init() {
+	  var bLazy = new _blazy2.default({
+	    offset: 100,
+	    success: function success(el) {
+	      console.log('Image loaded!');
+	    },
+	    error: function error(el, msg) {
+	      console.log(msg);
+	    }
+	  });
+	}
+
+/***/ },
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	  hey, [be]Lazy.js - v1.8.2 - 2016.10.25
+	  A fast, small and dependency free lazy load script (https://github.com/dinbror/blazy)
+	  (c) Bjoern Klinggaard - @bklinggaard - http://dinbror.dk/blazy
+	*/
+	;
+	(function(root, blazy) {
+	    if (true) {
+	        // AMD. Register bLazy as an anonymous module
+	        !(__WEBPACK_AMD_DEFINE_FACTORY__ = (blazy), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	    } else if (typeof exports === 'object') {
+	        // Node. Does not work with strict CommonJS, but
+	        // only CommonJS-like environments that support module.exports,
+	        // like Node.
+	        module.exports = blazy();
+	    } else {
+	        // Browser globals. Register bLazy on window
+	        root.Blazy = blazy();
+	    }
+	})(this, function() {
+	    'use strict';
+
+	    //private vars
+	    var _source, _viewport, _isRetina, _supportClosest, _attrSrc = 'src', _attrSrcset = 'srcset';
+
+	    // constructor
+	    return function Blazy(options) {
+	        //IE7- fallback for missing querySelectorAll support
+	        if (!document.querySelectorAll) {
+	            var s = document.createStyleSheet();
+	            document.querySelectorAll = function(r, c, i, j, a) {
+	                a = document.all, c = [], r = r.replace(/\[for\b/gi, '[htmlFor').split(',');
+	                for (i = r.length; i--;) {
+	                    s.addRule(r[i], 'k:v');
+	                    for (j = a.length; j--;) a[j].currentStyle.k && c.push(a[j]);
+	                    s.removeRule(0);
+	                }
+	                return c;
+	            };
+	        }
+
+	        //options and helper vars
+	        var scope = this;
+	        var util = scope._util = {};
+	        util.elements = [];
+	        util.destroyed = true;
+	        scope.options = options || {};
+	        scope.options.error = scope.options.error || false;
+	        scope.options.offset = scope.options.offset || 100;
+	        scope.options.root = scope.options.root || document;
+	        scope.options.success = scope.options.success || false;
+	        scope.options.selector = scope.options.selector || '.b-lazy';
+	        scope.options.separator = scope.options.separator || '|';
+	        scope.options.containerClass = scope.options.container;
+	        scope.options.container = scope.options.containerClass ? document.querySelectorAll(scope.options.containerClass) : false;
+	        scope.options.errorClass = scope.options.errorClass || 'b-error';
+	        scope.options.breakpoints = scope.options.breakpoints || false;
+	        scope.options.loadInvisible = scope.options.loadInvisible || false;
+	        scope.options.successClass = scope.options.successClass || 'b-loaded';
+	        scope.options.validateDelay = scope.options.validateDelay || 25;
+	        scope.options.saveViewportOffsetDelay = scope.options.saveViewportOffsetDelay || 50;
+	        scope.options.srcset = scope.options.srcset || 'data-srcset';
+	        scope.options.src = _source = scope.options.src || 'data-src';
+	        _supportClosest = Element.prototype.closest;
+	        _isRetina = window.devicePixelRatio > 1;
+	        _viewport = {};
+	        _viewport.top = 0 - scope.options.offset;
+	        _viewport.left = 0 - scope.options.offset;
+
+
+	        /* public functions
+	         ************************************/
+	        scope.revalidate = function() {
+	            initialize(scope);
+	        };
+	        scope.load = function(elements, force) {
+	            var opt = this.options;
+	            if (elements && elements.length === undefined) {
+	                loadElement(elements, force, opt);
+	            } else {
+	                each(elements, function(element) {
+	                    loadElement(element, force, opt);
+	                });
+	            }
+	        };
+	        scope.destroy = function() {            
+	            var util = scope._util;
+	            if (scope.options.container) {
+	                each(scope.options.container, function(object) {
+	                    unbindEvent(object, 'scroll', util.validateT);
+	                });
+	            }
+	            unbindEvent(window, 'scroll', util.validateT);
+	            unbindEvent(window, 'resize', util.validateT);
+	            unbindEvent(window, 'resize', util.saveViewportOffsetT);
+	            util.count = 0;
+	            util.elements.length = 0;
+	            util.destroyed = true;
+	        };
+
+	        //throttle, ensures that we don't call the functions too often
+	        util.validateT = throttle(function() {
+	            validate(scope);
+	        }, scope.options.validateDelay, scope);
+	        util.saveViewportOffsetT = throttle(function() {
+	            saveViewportOffset(scope.options.offset);
+	        }, scope.options.saveViewportOffsetDelay, scope);
+	        saveViewportOffset(scope.options.offset);
+
+	        //handle multi-served image src (obsolete)
+	        each(scope.options.breakpoints, function(object) {
+	            if (object.width >= window.screen.width) {
+	                _source = object.src;
+	                return false;
+	            }
+	        });
+
+	        // start lazy load
+	        setTimeout(function() {
+	            initialize(scope);
+	        }); // "dom ready" fix
+
+	    };
+
+
+	    /* Private helper functions
+	     ************************************/
+	    function initialize(self) {
+	        var util = self._util;
+	        // First we create an array of elements to lazy load
+	        util.elements = toArray(self.options);
+	        util.count = util.elements.length;
+	        // Then we bind resize and scroll events if not already binded
+	        if (util.destroyed) {
+	            util.destroyed = false;
+	            if (self.options.container) {
+	                each(self.options.container, function(object) {
+	                    bindEvent(object, 'scroll', util.validateT);
+	                });
+	            }
+	            bindEvent(window, 'resize', util.saveViewportOffsetT);
+	            bindEvent(window, 'resize', util.validateT);
+	            bindEvent(window, 'scroll', util.validateT);
+	        }
+	        // And finally, we start to lazy load.
+	        validate(self);
+	    }
+
+	    function validate(self) {
+	        var util = self._util;
+	        for (var i = 0; i < util.count; i++) {
+	            var element = util.elements[i];
+	            if (elementInView(element, self.options) || hasClass(element, self.options.successClass)) {
+	                self.load(element);
+	                util.elements.splice(i, 1);
+	                util.count--;
+	                i--;
+	            }
+	        }
+	        if (util.count === 0) {
+	            self.destroy();
+	        }
+	    }
+
+	    function elementInView(ele, options) {
+	        var rect = ele.getBoundingClientRect();
+
+	        if(options.container && _supportClosest){
+	            // Is element inside a container?
+	            var elementContainer = ele.closest(options.containerClass);
+	            if(elementContainer){
+	                var containerRect = elementContainer.getBoundingClientRect();
+	                // Is container in view?
+	                if(inView(containerRect, _viewport)){
+	                    var top = containerRect.top - options.offset;
+	                    var right = containerRect.right + options.offset;
+	                    var bottom = containerRect.bottom + options.offset;
+	                    var left = containerRect.left - options.offset;
+	                    var containerRectWithOffset = {
+	                        top: top > _viewport.top ? top : _viewport.top,
+	                        right: right < _viewport.right ? right : _viewport.right,
+	                        bottom: bottom < _viewport.bottom ? bottom : _viewport.bottom,
+	                        left: left > _viewport.left ? left : _viewport.left
+	                    };
+	                    // Is element in view of container?
+	                    return inView(rect, containerRectWithOffset);
+	                } else {
+	                    return false;
+	                }
+	            }
+	        }      
+	        return inView(rect, _viewport);
+	    }
+
+	    function inView(rect, viewport){
+	        // Intersection
+	        return rect.right >= viewport.left &&
+	               rect.bottom >= viewport.top && 
+	               rect.left <= viewport.right && 
+	               rect.top <= viewport.bottom;
+	    }
+
+	    function loadElement(ele, force, options) {
+	        // if element is visible, not loaded or forced
+	        if (!hasClass(ele, options.successClass) && (force || options.loadInvisible || (ele.offsetWidth > 0 && ele.offsetHeight > 0))) {
+	            var dataSrc = getAttr(ele, _source) || getAttr(ele, options.src); // fallback to default 'data-src'
+	            if (dataSrc) {
+	                var dataSrcSplitted = dataSrc.split(options.separator);
+	                var src = dataSrcSplitted[_isRetina && dataSrcSplitted.length > 1 ? 1 : 0];
+	                var srcset = getAttr(ele, options.srcset);
+	                var isImage = equal(ele, 'img');
+	                var parent = ele.parentNode;
+	                var isPicture = parent && equal(parent, 'picture');
+	                // Image or background image
+	                if (isImage || ele.src === undefined) {
+	                    var img = new Image();
+	                    // using EventListener instead of onerror and onload
+	                    // due to bug introduced in chrome v50 
+	                    // (https://productforums.google.com/forum/#!topic/chrome/p51Lk7vnP2o)
+	                    var onErrorHandler = function() {
+	                        if (options.error) options.error(ele, "invalid");
+	                        addClass(ele, options.errorClass);
+	                        unbindEvent(img, 'error', onErrorHandler);
+	                        unbindEvent(img, 'load', onLoadHandler);
+	                    };
+	                    var onLoadHandler = function() {
+	                        // Is element an image
+	                        if (isImage) {
+	                            if(!isPicture) {
+	                                handleSources(ele, src, srcset);
+	                            }
+	                        // or background-image
+	                        } else {
+	                            ele.style.backgroundImage = 'url("' + src + '")';
+	                        }
+	                        itemLoaded(ele, options);
+	                        unbindEvent(img, 'load', onLoadHandler);
+	                        unbindEvent(img, 'error', onErrorHandler);
+	                    };
+	                    
+	                    // Picture element
+	                    if (isPicture) {
+	                        img = ele; // Image tag inside picture element wont get preloaded
+	                        each(parent.getElementsByTagName('source'), function(source) {
+	                            handleSource(source, _attrSrcset, options.srcset);
+	                        });
+	                    }
+	                    bindEvent(img, 'error', onErrorHandler);
+	                    bindEvent(img, 'load', onLoadHandler);
+	                    handleSources(img, src, srcset); // Preload
+
+	                } else { // An item with src like iframe, unity games, simpel video etc
+	                    ele.src = src;
+	                    itemLoaded(ele, options);
+	                }
+	            } else {
+	                // video with child source
+	                if (equal(ele, 'video')) {
+	                    each(ele.getElementsByTagName('source'), function(source) {
+	                        handleSource(source, _attrSrc, options.src);
+	                    });
+	                    ele.load();
+	                    itemLoaded(ele, options);
+	                } else {
+	                    if (options.error) options.error(ele, "missing");
+	                    addClass(ele, options.errorClass);
+	                }
+	            }
+	        }
+	    }
+
+	    function itemLoaded(ele, options) {
+	        addClass(ele, options.successClass);
+	        if (options.success) options.success(ele);
+	        // cleanup markup, remove data source attributes
+	        removeAttr(ele, options.src);
+	        removeAttr(ele, options.srcset);
+	        each(options.breakpoints, function(object) {
+	            removeAttr(ele, object.src);
+	        });
+	    }
+
+	    function handleSource(ele, attr, dataAttr) {
+	        var dataSrc = getAttr(ele, dataAttr);
+	        if (dataSrc) {
+	            setAttr(ele, attr, dataSrc);
+	            removeAttr(ele, dataAttr);
+	        }
+	    }
+
+	    function handleSources(ele, src, srcset){
+	        if(srcset) {
+	            setAttr(ele, _attrSrcset, srcset); //srcset
+	        }
+	        ele.src = src; //src 
+	    }
+
+	    function setAttr(ele, attr, value){
+	        ele.setAttribute(attr, value);
+	    }
+
+	    function getAttr(ele, attr) {
+	        return ele.getAttribute(attr);
+	    }
+
+	    function removeAttr(ele, attr){
+	        ele.removeAttribute(attr); 
+	    }
+
+	    function equal(ele, str) {
+	        return ele.nodeName.toLowerCase() === str;
+	    }
+
+	    function hasClass(ele, className) {
+	        return (' ' + ele.className + ' ').indexOf(' ' + className + ' ') !== -1;
+	    }
+
+	    function addClass(ele, className) {
+	        if (!hasClass(ele, className)) {
+	            ele.className += ' ' + className;
+	        }
+	    }
+
+	    function toArray(options) {
+	        var array = [];
+	        var nodelist = (options.root).querySelectorAll(options.selector);
+	        for (var i = nodelist.length; i--; array.unshift(nodelist[i])) {}
+	        return array;
+	    }
+
+	    function saveViewportOffset(offset) {
+	        _viewport.bottom = (window.innerHeight || document.documentElement.clientHeight) + offset;
+	        _viewport.right = (window.innerWidth || document.documentElement.clientWidth) + offset;
+	    }
+
+	    function bindEvent(ele, type, fn) {
+	        if (ele.attachEvent) {
+	            ele.attachEvent && ele.attachEvent('on' + type, fn);
+	        } else {
+	            ele.addEventListener(type, fn, { capture: false, passive: true });
+	        }
+	    }
+
+	    function unbindEvent(ele, type, fn) {
+	        if (ele.detachEvent) {
+	            ele.detachEvent && ele.detachEvent('on' + type, fn);
+	        } else {
+	            ele.removeEventListener(type, fn, { capture: false, passive: true });
+	        }
+	    }
+
+	    function each(object, fn) {
+	        if (object && fn) {
+	            var l = object.length;
+	            for (var i = 0; i < l && fn(object[i], i) !== false; i++) {}
+	        }
+	    }
+
+	    function throttle(fn, minDelay, scope) {
+	        var lastCall = 0;
+	        return function() {
+	            var now = +new Date();
+	            if (now - lastCall < minDelay) {
+	                return;
+	            }
+	            lastCall = now;
+	            fn.apply(scope, arguments);
+	        };
+	    }
+	});
+
+
+/***/ }
+]);
