@@ -5,7 +5,6 @@
   padding: 3rem 0;
   text-align: center;
 
-
   .icon {
     margin: 0 0 2rem 0;
 
@@ -58,7 +57,7 @@
       text-align: right;
 
       button {
-        background-color: #555;
+        background-color: #222;
         border: 1px solid #444;
         color: #fff;
         font-weight: 600;
@@ -80,6 +79,24 @@
     .right-content {
       float: right;
       padding-left: 0.25rem;
+    }
+  }
+
+  #contact-message {
+    margin: 10rem 0;
+    padding: 5rem 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: none;
+
+    h3 {
+      font-size: 1.3rem;
+      color: #222;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: #444;
+      font-size: 1.1rem;
     }
   }
 }

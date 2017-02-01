@@ -33,7 +33,7 @@ module.exports = {
     root,
     url: "https://barrasmovilesmendoza.com.ar",
     title: "John Jarana",
-    author: "Alan Boglioli",
+    author: "IDEE",
     logo: 'logo.png'
   },
   assets: {
@@ -47,8 +47,8 @@ module.exports = {
   },
   pages,
   contact: [
-    {icon: 'phone', text: 'johnjarana@gmail.com'},
-    {icon: 'envelope', text: '555 5555'},
-    {icon: 'map-marker', text: 'Mapa'}
+    {icon: 'envelope', text: 'johnjaranabarras@gmail.com'},
+    {icon: 'phone', text: `<a href="intent://send/2613830752#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end">261 3830752</a>`},
+    {icon: 'facebook', text: '<a href="https://www.facebook.com/johnjaranabarras/">John Jarana Barras</a>'}
   ]
 }
