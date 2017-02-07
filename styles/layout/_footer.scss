@@ -33,6 +33,7 @@
     flex-wrap: nowrap;
     justify-content: space-around;
     padding: 1rem 0;
+    height: 128px;
 
     .brand {
       width: 64px;
@@ -70,6 +71,17 @@
         margin: 12px 0 0 10px;
         font-weight: 600;
         text-shadow: 0 0 1px #000;
+
+        a {
+          color: #fff;
+          font-weight: 600;
+          text-shadow: 0 0 1px #000;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
       }
     }
   }
