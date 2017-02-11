@@ -219,4 +219,4 @@ gulp.task('images', function() {
     .pipe(gulp.dest(imageDst));
 });
 
-gulp.task('default', ['vendor', 'scripts', 'styles', 'images', 'metalsmith']);
+gulp.task('default', ['vendor', 'scripts', 'styles', 'metalsmith']);
