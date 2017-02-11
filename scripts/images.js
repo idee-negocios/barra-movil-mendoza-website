@@ -4,7 +4,6 @@ function background() {
   let bLazy = new Blazy({
     offset: 100,
     success(el) {
-      console.log('Image loaded!');
     },
     error(el, msg) {
       console.log(msg);
@@ -12,7 +11,7 @@ function background() {
   });
 }
 
-function brands() {
+function brands(options) {
   // Configuration
   const screenWidth = $(window).width();
   const imageWidth = 64;
@@ -56,11 +55,6 @@ function brands() {
 
   renderImages(usedIcons);
 
-  console.log(imagesInScreen);
-  console.log(usedIcons);
-  console.log(imagesNumber);
-  console.log(unusedIcons);
-
   if(imagesInScreen < imagesNumber) {
     setInterval(_ => {
       let [unusedIcon, unusedIconIndex] = randomItem(unusedIcons);
@@ -73,12 +67,15 @@ function brands() {
       unusedIcons[unusedIconIndex] = usedIcon;
 
       renderImages(usedIcons);
-    }, 1000);
+    }, options.timeOut);
   }
 
 }
 
 export function init() {
   background();
-  brands();
+
+  brands({
+    timeOut: 5000
+  });
 }
