@@ -9,12 +9,14 @@
   <url>
     <loc>{{site.url}}/</loc>
     <lastmod>{{formatDate "now"}}</lastmod>
+    <changefreq>daily</changefreq>
   </url>
 
   {{#each pages}}
   <url>
     <loc>{{this.url}}</loc>
     <lastmod>{{formatDate "now"}}</lastmod>
+    <changefreq>daily</changefreq>
   </url>
   {{/each}}
 
