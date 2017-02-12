@@ -22,7 +22,7 @@ const pages = [
   {url: '/patio-cervecero.html', name: 'Patio cervecero'},
   {url: '/barra-sin-alcohol.html', name: 'Barra sin alcohol'},
   {url: '/eventos-empresariales.html', name: 'Eventos empresariales'},
-  {url: '/bodas-y-fiestas.html', name: 'Bodas y fiestas'}
+  {url: '/casamientos-y-fiestas.html', name: 'Casamientos y fiestas'}
 ].map(p => {
   p.url = join(root, p.url);
   return p;
