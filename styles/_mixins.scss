@@ -1,3 +1,7 @@
+@mixin text-border($intensity, $color) {
+  text-shadow: 1px 0 $intensity $color, -1px 0 $intensity $color, 0 1px $intensity $color, 0 -1px $intensity $color;
+}
+
 @mixin opacity-layer($color) {
   .opacity-layer {
     position: absolute;

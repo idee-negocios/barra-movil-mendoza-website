@@ -1,12 +1,14 @@
 @include mobile-and-tablet {
   .casamientos-y-fiestas-header {
     .content {
-      bottom: 15%;
 
       article {
         padding: 0 1rem;
         h1, h2 {
-          font-size: 1.5rem;
+          font-size: 1.2rem;
+        }
+        h3 {
+          font-size: 1rem;
         }
       }
     }
