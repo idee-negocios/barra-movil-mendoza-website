@@ -15,7 +15,7 @@ install:
   - npm install
 
 script:
-  - npm run build
+  - npm run gulp images && npm run build
 
 after_success:
   - surge -p ./build --domain barramovilmendoza.com.ar
