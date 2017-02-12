@@ -14,7 +14,7 @@ const config = {
 };
 const firebaseContact = firebase.initializeApp(config);
 
-const firebaseEnabled = false;
+const firebaseEnabled = true;
 
 
 export function init() {
