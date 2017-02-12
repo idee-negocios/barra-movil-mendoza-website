@@ -2,6 +2,8 @@
   @extend .section;
   @include cover-background;
 
+  height: 100vh;
+
   // Navbar
   .menu {
     background: rgba(0, 0, 0, 0.5);
@@ -112,9 +114,14 @@
       }
 
       h1 {
-        color: #fff;
+        // color: #fff;
+        // font-size: 2rem;
+        // margin-bottom: 1rem;
+        padding: 1.5rem 0;
+        border-top: 2px solid #555;
+        border-bottom: 2px solid #555;
         font-size: 2rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
       }
 
       h2 {
