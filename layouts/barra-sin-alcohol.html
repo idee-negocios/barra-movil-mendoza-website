@@ -4,13 +4,16 @@
   <section class="content">
 
     <div class="row">
-      <article class="col-12 col-mobile-12 col-tablet-12">
+      <article class="col-10 col-offset-1 col-mobile-12 col-tablet-12">
         <h1>
-          LA <strong>BARRA JUVENIL</strong> PARA FIESTAS Y CUMPLEAÑOS DE LOS MÁS CHICOS
+          <strong>BARRA MÓVIL SIN ALCOHOL PARA FIESTAS JUVENILES</strong>
         </h1>
         <h2>
           <strong>VARIEDAD DE TRAGOS SIN ALCOHOL</strong>
         </h2>
+        <h3>
+          En esta barra vas a encontrar tragos con frutas, batidos con helado, licuados, cartas mixtas y más.
+        </h3>
       </article>
     </div>
 
@@ -20,6 +23,7 @@
   {{/content}}
 
   {{#content "main"}}
+  {{!--
   <section class="{{prefix}}-top-section b-lazy" data-src="{{assets.img}}/{{prefix}}/main.jpg">
 
     <div class="content">
@@ -50,75 +54,10 @@
 
     </div>
   </section>
+  --}}
 
   <section class="{{prefix}}-main-section">
-
-    <div class="content">
-      <div class="row">
-        <div class="col-6 col-offset-3 col-mobile-12 col-tablet-10 col-tablet-offset-1">
-
-          <header>
-            <h1>CARTA DE TRAGOS - CUMPLEAÑOS DE 15 - PRIMERA LÍNEA</h1>
-          </header>
-
-          <span class="separator"></span>
-
-          {{#each drinks}}
-          <article class="menu">
-
-            <h2>{{this.name}}</h2>
-
-            {{#each this.items}}
-            <p><strong>{{this.name}}</strong>: {{this.description}}</p>
-            {{/each}}
-
-          </article>
-          {{/each}}
-
-          <img class="left-icon" alt="Left icon" src="{{assets.icons}}/top-left-leaf.png" />
-          <img class="right-icon" alt="Right icon" src="{{assets.icons}}/top-right-leaf.png" />
-        </div>
-      </div>
-    </div>
-
-    <div class="clearfix">
-
-    </div>
-  </section>
-
-  <section class="{{prefix}}-main-section">
-
-    <div class="content">
-      <div class="row">
-        <div class="col-6 col-offset-3 col-mobile-12 col-tablet-10 col-tablet-offset-1">
-
-          <header>
-            <h1>CARTA DE TRAGOS - CUMPLEAÑOS DE 15 - LÍNEA PREMIUM</h1>
-          </header>
-
-          <span class="separator"></span>
-
-          {{#each premium-drinks}}
-          <article class="menu">
-
-            <h2>{{this.name}}</h2>
-
-            {{#each this.items}}
-            <p><strong>{{this.name}}</strong>: {{this.description}}</p>
-            {{/each}}
-
-          </article>
-          {{/each}}
-
-          <img class="left-icon" alt="Left icon" src="{{assets.icons}}/top-left-leaf.png" />
-          <img class="right-icon" alt="Right icon" src="{{assets.icons}}/top-right-leaf.png" />
-        </div>
-      </div>
-    </div>
-
-    <div class="clearfix">
-
-    </div>
+    {{> card id="premium" title='CARTA DE TRAGOS' drinks=premium-drinks}}
   </section>
   {{/content}}
 

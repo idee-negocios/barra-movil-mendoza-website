@@ -1,0 +1,38 @@
+<div class="card">
+  <div class="row">
+    <div class="col-6 col-offset-3 col-mobile-12 col-tablet-10 col-tablet-offset-1">
+
+      <header>
+        <h1>
+          {{title}}
+          <button class="toggle-btn" data-toggle="{{id}}"><i class="fa fa-chevron-down"></i></button>
+        </h1>
+      </header>
+
+      <div id="{{id}}" class="body">
+
+        <span class="separator"></span>
+
+        {{#each drinks}}
+        <article class="menu">
+
+          <h2>{{this.name}}</h2>
+
+          {{#each this.items}}
+          <div class="drink">
+            <h4>{{this.name}}</h4>
+            <p>{{this.description}}</p>
+          </div>
+          {{/each}}
+
+        </article>
+        {{/each}}
+      </div>
+
+      <img class="left-icon" alt="Left icon" src="{{assets.icons}}/top-left-leaf.png" />
+      <img class="right-icon" alt="Right icon" src="{{assets.icons}}/top-right-leaf.png" />
+    </div>
+  </div>
+</div>
+
+<div class="clearfix"></div>

@@ -1,16 +1,22 @@
 {{#extend "default"}}
 
   {{#content "header-content"}}
-  <section class="content col-12 col-mobile-12 col-tablet-12">
-    <div class="body">
-      <h1>
-        BARRAS MÓVILES DE TRAGOS PARA <strong>EVENTOS Y FIESTAS</strong> EN
-        MENDOZA
-      </h1>
+  <section class="content">
+
+    <div class="row">
+      <article class="col-10 col-offset-1 col-mobile-12 col-tablet-10 col-tablet-offset-1">
+        <h1>
+          BARRAS MÓVILES PARA <strong>EVENTOS</strong> EN
+          MENDOZA
+        </h1>
+
+        <div class="button">
+          <button id="home-btn">¡Pedí tu presupuesto!</button>
+        </div>
+      </article>
     </div>
-    <div class="button">
-      <button id="home-btn">¡Pedí tu presupuesto!</button>
-    </div>
+
+    <div class="clearfix"></div>
   </section>
   {{/content}}
 
@@ -32,7 +38,8 @@
           <div class="icon">
             <div class="vertical-container">
               <div class="image-container vertical-center">
-                <img src="{{../assets.icons}}/{{../prefix}}/{{this.icon}}" alt="{{this.text}}" />
+                <img src="{{../assets.icons}}/{{../prefix}}/{{this.icon}}"
+                     alt="{{this.text}}" />
               </div>
             </div>
           </div>

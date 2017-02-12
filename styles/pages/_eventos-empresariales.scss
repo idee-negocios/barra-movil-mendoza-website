@@ -1,44 +1,6 @@
 .eventos-empresariales-header {
-  height: 100vh;
-
   .content {
-    position: absolute;
-    bottom: 25%;
-    width: 100%;
-
-    .title-container {
-      padding: 0 1rem;
-
-      h1, h2, h3 {
-        text-align: center;
-        line-height: 1.5;
-      }
-
-      h1 {
-        color: #fff;
-        font-size: 2rem;
-        margin-bottom: 2rem;
-      }
-
-      h2 {
-        color: #eee;
-        font-size: 1rem;
-        margin-bottom: 1rem;
-      }
-
-      h3 {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-        border: 2px solid #aaa;
-        border-radius: 10px;
-        background: none;
-        color: #fff;
-
-        &:hover {
-          box-shadow: inset 0 0 5px #555;
-        }
-      }
-    }
+    padding: 15rem 0;
   }
 }
 

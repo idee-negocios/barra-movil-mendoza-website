@@ -1,0 +1,25 @@
+.casamientos-y-fiestas-header {
+  .content {
+    padding: 15rem 0;
+  }
+}
+
+.casamientos-y-fiestas-section {
+  padding: 3rem 0;
+  position: relative;
+
+  .left-icon, .right-icon {
+    width: 256px;
+    height: auto;
+    position: absolute;
+    top: 0;
+  }
+
+  .left-icon {
+    left: 0;
+  }
+
+  .right-icon {
+    right: 0;
+  }
+}

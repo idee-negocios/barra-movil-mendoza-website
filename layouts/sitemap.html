@@ -10,4 +10,12 @@
     <loc>{{site.url}}/</loc>
     <lastmod>{{formatDate "now"}}</lastmod>
   </url>
+
+  {{#each pages}}
+  <url>
+    <loc>{{this.url}}</loc>
+    <lastmod>{{formatDate "now"}}</lastmod>
+  </url>
+  {{/each}}
+
 </urlset>

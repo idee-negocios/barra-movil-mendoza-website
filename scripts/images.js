@@ -2,7 +2,7 @@ import Blazy from 'blazy';
 
 function background() {
   let bLazy = new Blazy({
-    offset: 100,
+    offset: 200,
     success(el) {
     },
     error(el, msg) {
