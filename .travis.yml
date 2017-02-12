@@ -15,7 +15,7 @@ install:
   - npm install
 
 script:
-  - npm run production
+  - npm run build
 
 after_success:
-  - surge -p ./build/ --domain ideenegocios.com.ar
+  - surge -p ./build --domain barramovilmendoza.com.ar
