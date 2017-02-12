@@ -1,19 +1,4 @@
 @include mobile-and-tablet {
-  .casamientos-y-fiestas-header {
-    .content {
-
-      article {
-        padding: 0 1rem;
-        h1, h2 {
-          font-size: 1.2rem;
-        }
-        h3 {
-          font-size: 1rem;
-        }
-      }
-    }
-  }
-
   .casamientos-y-fiestas-section {
     .left-icon, .right-icon {
       display: none;

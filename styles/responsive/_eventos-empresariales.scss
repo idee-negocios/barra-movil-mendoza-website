@@ -1,17 +1,4 @@
 @include mobile-and-tablet {
-  .eventos-empresariales-header {
-    .content {
-      bottom: 15%;
-
-      article {
-        padding: 0 1rem;
-        h1, h2 {
-          font-size: 1.5rem;
-        }
-      }
-    }
-  }
-
   .eventos-empresariales-section {
     .left-icon, .right-icon {
       display: none;
