@@ -164,7 +164,6 @@ gulp.task('webpack', function(callback) {
       return callback(err);
     }
 
-    //console.log(stats.toString({}));
     callback();
   });
 });
