@@ -48,7 +48,7 @@ module.exports = {
   pages,
   contact: [
     {icon: 'envelope', text: 'johnjaranabarras@gmail.com'},
-    {icon: 'phone', text: `<a href="intent://send/2613830752#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end">261 3830752</a>`},
+    {icon: 'phone', text: `261 3830752`},
     {icon: 'facebook', text: '<a href="https://www.facebook.com/johnjaranabarras/">John Jarana Barras</a>'}
   ]
 }

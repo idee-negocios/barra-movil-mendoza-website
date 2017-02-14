@@ -43,7 +43,7 @@ export function init() {
         return data;
       }, {});
 
-      contactData.date = moment().format('D MMM, YYYY');
+      contactData.date = moment().format('MMMM Do YYYY, h:mm:ss a');
 
       console.log(contactData);
 
