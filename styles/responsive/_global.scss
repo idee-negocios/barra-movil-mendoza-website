@@ -1,6 +1,15 @@
-@include mobile {
+@include mobile-and-tablet {
+  /* SECTIONS */
   .ab-header {
+    height: auto;
+    padding: 15rem 0;
+
     .menu {
+      .icon {
+        border-radius: 0 0 2rem 0;
+        margin: 0;
+      }
+
       .navbar-container {
         padding: 0.5rem 0;
 
@@ -41,6 +50,8 @@
 
     // TODO
     .content {
+      padding: 0 2rem;
+
       article {
         h1 {
           font-size: 1.2rem;
@@ -52,13 +63,22 @@
     }
   }
 
+  .card {
+    header {
+      h1 {
+        font-size: 0.9rem;
+
+        .toggle-btn {
+          padding: 0 1rem;
+        }
+      }
+    }
+  }
+
   .ab-contact {
     .form {
-      .left-content, .right-content {
-        float: none;
-        width: 100%;
-        padding: 0;
-      }
+      width: 96%;
+      margin-left: 2%;
     }
   }
 
@@ -70,36 +90,20 @@
       }
     }
   }
+
 }
 
 @include tablet {
-  .ab-header {
-    .menu {
-      .navbar-container {
-        padding: 1rem 0 1rem 9rem;
-
-        .navbar {
-          font-size: 0.8rem;
-        }
-      }
-    }
-  }
 }
 
-@include mobile-and-tablet {
-  .ab-header {
-    .menu {
-      .icon {
-        border-radius: 0 0 2rem 0;
-        margin: 0;
-      }
-    }
-  }
-
+@include mobile {
   .ab-contact {
     .form {
-      width: 96%;
-      margin-left: 2%;
+      .left-content, .right-content {
+        float: none;
+        width: 100%;
+        padding: 0;
+      }
     }
   }
 }
