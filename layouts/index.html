@@ -35,14 +35,16 @@
         {{#each items}}
         <article class="item">
 
-          <div class="icon">
-            <div class="vertical-container">
-              <div class="image-container vertical-center">
-                <img src="{{../assets.icons}}/{{../prefix}}/{{this.icon}}"
-                     alt="{{this.text}}" />
+          <a href="{{this.link}}">
+            <div class="icon">
+              <div class="vertical-container">
+                  <div class="image-container vertical-center">
+                      <img src="{{../assets.icons}}/{{../prefix}}/{{this.icon}}"
+                          alt="{{this.text}}" />
+                  </div>
               </div>
             </div>
-          </div>
+          </a>
 
           <div class="body">
             <p>{{{this.text}}}</p>
