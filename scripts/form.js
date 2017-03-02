@@ -29,8 +29,6 @@ export function init() {
 
     let contactData = contactFormEl.serializeArray();
 
-    console.log(contactData);
-
     let ok = contactData.every(function(item) {
       return item.value !== '';
     });
@@ -44,8 +42,6 @@ export function init() {
       }, {});
 
       contactData.date = moment().format('MMMM Do YYYY, h:mm:ss a');
-
-      console.log(contactData);
 
       // Submit to Firebase
       if(firebaseEnabled) {
