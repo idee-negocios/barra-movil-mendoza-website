@@ -58,6 +58,14 @@ export function init() {
         });
       }
 
+      // Send to Analytics
+      ga('send', {
+        hitType: 'event',
+        eventCategory: 'Formularios',
+        eventAction: 'consulta',
+        eventLabel: page
+      });
+
       // Thanks
       contactFormEl.hide(500);
       contactMessageEl.show(1000);
