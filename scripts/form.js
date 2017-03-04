@@ -61,9 +61,10 @@ export function init() {
       // Send to Analytics
       ga('send', {
         hitType: 'event',
-        eventCategory: 'Formularios',
+        eventCategory: 'formularios',
         eventAction: 'consulta',
-        eventLabel: page
+        eventLabel: page,
+        eventValue: 1
       });
 
       // Thanks
