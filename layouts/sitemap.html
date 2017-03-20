@@ -6,7 +6,7 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   {{#each pages}}
   <url>
-    <loc>{{site.url}}{{this.url}}</loc>
+    <loc>{{../site.url}}{{this.url}}</loc>
     <lastmod>{{formatDate "now"}}</lastmod>
     <changefreq>daily</changefreq>
   </url>
