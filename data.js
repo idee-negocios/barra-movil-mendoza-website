@@ -31,7 +31,7 @@ const pages = [
 module.exports = {
   site: {
     root,
-    url: "https://barrasmovilesmendoza.com.ar",
+    url: "https://barramovilmendoza.com.ar",
     title: "John Jarana",
     author: "IDEE",
     logo: 'logo.png'
