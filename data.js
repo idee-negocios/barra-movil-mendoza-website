@@ -32,7 +32,7 @@ module.exports = {
   site: {
     root,
     url: "https://barramovilmendoza.com.ar",
-    title: "John Jarana",
+    title: "JOHN JARANA",
     author: "IDEE",
     logo: 'logo.png'
   },
