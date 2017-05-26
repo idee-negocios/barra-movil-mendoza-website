@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import * as slick from 'slick-carousel';
 
 import * as Navbar from './navbar';
 import * as Form from './form';
@@ -12,4 +13,11 @@ $(document).ready(() => {
   Images.init();
   Buttons.init();
   Footer.init();
+
+  $('.slide').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true
+  });
 });

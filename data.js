@@ -43,7 +43,8 @@ module.exports = {
     styles: join(root, styles)
   },
   files: {
-    brandIcons: onlyFilenames(globby.sync(['./sources/img/icons/brands/*']))
+    brandIcons: onlyFilenames(globby.sync(['./sources/img/icons/brands/*'])),
+    photos: onlyFilenames(globby.sync(['./images/fotos/*']))
   },
   pages,
   contact: [
