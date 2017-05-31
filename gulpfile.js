@@ -146,7 +146,7 @@ gulp.task('webpack', function(callback) {
     },
     resolveLoader: {
       // root: path.join(__dirname, 'node_modules'),
-      modules: [path.resolve(__dirname, "app"), "node_modules"]
+      modules: [__dirname, "node_modules"]
     },
     module: {
       loaders: [
