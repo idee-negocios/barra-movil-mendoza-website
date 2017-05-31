@@ -119,7 +119,10 @@ gulp.task('webpack', function(callback) {
         $: "jquery",
         jQuery: "jquery"
       }),
-      new webpack.optimize.CommonsChunkPlugin('vendor', 'commons.chunk.js'),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      filename: 'commons.chunk.js'
+    }),
       new webpack.DefinePlugin({
         "process.env": {
           NODE_ENV: JSON.stringify(args.production ? 'production' : 'development')
@@ -142,7 +145,8 @@ gulp.task('webpack', function(callback) {
       filename: 'app.js'
     },
     resolveLoader: {
-      root: path.join(__dirname, 'node_modules')
+      // root: path.join(__dirname, 'node_modules'),
+      modules: [path.resolve(__dirname, "app"), "node_modules"]
     },
     module: {
       loaders: [
