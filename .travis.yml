@@ -12,10 +12,12 @@ before_install:
   - npm install -g surge
 
 install:
+  - npm cache clean
   - npm install
 
 script:
   - npm run gulp images && npm run build
 
 after_success:
+  - ls -l ./build
   - surge -p ./build --domain barramovilmendoza.com.ar
