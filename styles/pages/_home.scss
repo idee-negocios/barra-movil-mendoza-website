@@ -14,6 +14,15 @@
 }
 
 .home-section {
+  .slide {
+    .slide-item {
+      height: 162px;
+      // width: 245px !important;
+    }
+  }
+}
+
+.home-section {
   @include cover-background;
   @include opacity(rgba(255, 255, 255, 0.2));
 
