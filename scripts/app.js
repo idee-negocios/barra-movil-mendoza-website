@@ -6,6 +6,9 @@ import * as Form from './form';
 import * as Images from './images';
 import * as Buttons from './buttons';
 import * as Footer from './footer';
+import * as Events from './events';
+
+Events.attach();
 
 $(document).ready(() => {
   Navbar.init();

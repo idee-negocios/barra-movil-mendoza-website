@@ -15,9 +15,13 @@
 
 .home-section {
   .slide {
+    .slick-slide {
+      /* hide white box */
+      display: none !important;
+    }
     .slide-item {
-      height: 162px;
-      // width: 245px !important;
+      display: block !important;
+      height: 200px;
     }
   }
 }
