@@ -1,7 +1,5 @@
 export function attach() {
-  // hide slick while it's loading
-  $('.slide').hide();
-
+  // when slick while it's loaded
   $('.slide').on('init', () => {
     $('.slide').show();
   });
