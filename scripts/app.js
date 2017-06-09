@@ -22,8 +22,10 @@ $(document).ready(() => {
     infinite: true,
     slidesToShow: 5,
     slidesToScroll: 1,
+    centerMode: true,
     autoplay: true,
     arrows: false,
+    variableWidth: true,
     responsive: [
       {
         breakpoint: 768,
