@@ -19,9 +19,9 @@ const styles = 'assets';
 // Pages
 const pages = [
   {url: '/', name: 'Inicio'},
-  {url: '/casamientos-y-fiestas.html', name: 'Casamientos y fiestas'},
+  {url: '/casamientos.html', name: 'Casamientos'},
   // {url: '/barra-sin-alcohol.html', name: 'Barra sin alcohol'},
-  {url: '/previas-y-reuniones.html', name: 'Previas y Reuniones'},
+  {url: '/eventos-personalizados.html', name: 'Eventos Personalizados'},
   // {url: '/patio-cervecero.html', name: 'Patio cervecero'}
 ].map(p => {
   p.url = join(root, p.url);
