@@ -67,6 +67,9 @@ export function init() {
         eventValue: 1
       });
 
+      // Send to Facebook
+      fbq('track', 'FormularioEnviado');
+
       // Thanks
       contactFormEl.hide(500);
       contactMessageEl.show(1000);
