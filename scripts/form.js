@@ -1,21 +1,5 @@
 import * as firebase from 'firebase';
-import moment from 'moment';
-import 'moment/locale/es';
-
-moment.locale('es');
-
-// Initialize Firebase
-const config = {
-  apiKey: "AIzaSyAERhm4hw0QCBBXS_-IL2pcxvv-ZUqrdMk",
-  authDomain: "contact-form-91ea2.firebaseapp.com",
-  databaseURL: "https://contact-form-91ea2.firebaseio.com",
-  storageBucket: "contact-form-91ea2.appspot.com",
-  messagingSenderId: "862668692236"
-};
-const firebaseContact = firebase.initializeApp(config);
-
-const firebaseEnabled = true;
-
+import * as axios from 'axios';
 
 export function init() {
   // elements
@@ -41,38 +25,24 @@ export function init() {
         return data;
       }, {});
 
-      contactData.date = moment().format('MMMM Do YYYY, h:mm:ss a');
+      axios.post('http://ideenegocios.com.ar:3000/john-jarana', contactData)
+        .then(res => {
+          // Send to Analytics
+          ga('send', {
+            hitType: 'event',
+            eventCategory: 'formularios',
+            eventAction: 'consulta',
+            eventLabel: page,
+            eventValue: 1
+          });
 
-      // Submit to Firebase
-      if(firebaseEnabled) {
-        firebase.auth().signInAnonymously().catch(function(error) {
-          // Handle Errors here.
-          var errorCode = error.code;
-          var errorMessage = error.message;
+          // Send to Facebook
+          fbq('track', 'FormularioEnviado');
+
+          // Thanks
+          contactFormEl.hide(500);
+          contactMessageEl.show(1000);
         });
-
-        firebase.auth().onAuthStateChanged(function(user) {
-          if (user) {
-            firebaseContact.database().ref('/contact').push(contactData);
-          }
-        });
-      }
-
-      // Send to Analytics
-      ga('send', {
-        hitType: 'event',
-        eventCategory: 'formularios',
-        eventAction: 'consulta',
-        eventLabel: page,
-        eventValue: 1
-      });
-
-      // Send to Facebook
-      fbq('track', 'FormularioEnviado');
-
-      // Thanks
-      contactFormEl.hide(500);
-      contactMessageEl.show(1000);
     }
   });
 

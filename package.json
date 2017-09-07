@@ -57,6 +57,7 @@
     "webpack": "^2.6.1"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "blazy": "^1.8.2",
     "firebase": "^4.1.1",
     "jquery": "^3.2.1",
