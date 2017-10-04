@@ -34,7 +34,8 @@ module.exports = {
     url: "https://barramovilmendoza.com.ar",
     title: "JOHN JARANA",
     author: "IDEE",
-    logo: 'logo.png'
+    logo: 'logo.png',
+    contactUrl: 'https://ideenegocios.com.ar:3001/john-jarana'
   },
   assets: {
     img: join(root, img),

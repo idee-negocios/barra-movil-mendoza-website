@@ -25,7 +25,7 @@ export function init() {
         return data;
       }, {});
 
-      axios.post('http://ideenegocios.com.ar:3000/john-jarana', contactData)
+      axios.post(contactUrl, contactData)
         .then(res => {
           // Send to Analytics
           ga('send', {
