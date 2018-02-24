@@ -1,13 +1,13 @@
 {
-  "name": "john-jarana-website",
+  "name": "barra-movil-website",
   "version": "1.0.1",
-  "description": "Barras Móviles John Jarana",
+  "description": "Barras Móviles en Mendoza",
   "main": "index.js",
   "author": "Alan Boglioli <alan.boglioli@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:aboglioli/john-jarana-website.git"
+    "url": "git@github.com:aboglioli/barra-movil-mendoza-website.git"
   },
   "homepage": "https://barramovilmendoza.com.ar",
   "scripts": {

@@ -1,2 +1,2 @@
 ## Desarrollo de...
-[John Jarana | Barras móviles en Mendoza](https://barramovilmendoza.com.ar/)
+[Bartender Group | Barras móviles en Mendoza](https://barramovilmendoza.com.ar/)

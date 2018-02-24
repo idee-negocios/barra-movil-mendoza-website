@@ -32,10 +32,10 @@ module.exports = {
   site: {
     root,
     url: "https://barramovilmendoza.com.ar",
-    title: "JOHN JARANA",
+    title: "BARTENDER GROUP",
     author: "IDEE",
-    logo: 'logo.png',
-    contactUrl: 'https://ideenegocios.com.ar:3001/john-jarana'
+    logo: 'logo.svg',
+    contactUrl: 'https://ideenegocios.com.ar:3001/barra-movil-mendoza'
   },
   assets: {
     img: join(root, img),
@@ -49,8 +49,8 @@ module.exports = {
   },
   pages,
   contact: [
-    {icon: 'envelope', text: 'johnjaranabarras@gmail.com'},
+    {icon: 'envelope', text: 'bartender.group@gmail.com'},
     {icon: 'phone', text: `261 3830752`},
-    {icon: 'facebook', text: '<a href="https://www.facebook.com/johnjaranabarras/">John Jarana Barras</a>'}
+    {icon: 'facebook', text: '<a href="https://www.facebook.com/PVHeventos/">Bartender Group</a>'}
   ]
 }
