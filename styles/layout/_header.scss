@@ -14,7 +14,7 @@
     z-index: 1;
 
     .icon {
-      background-color: white;
+      background-color: rgba(0, 0, 0, 0.5);
       border-radius: 0 0 2rem 2rem;
       display: inline-block;
       float: left;
@@ -23,8 +23,8 @@
       position: absolute;
 
       img {
-        height: 128px;
-        width: 128px;
+        height: auto;
+        width: 160px;
       }
     }
 
