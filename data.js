@@ -49,7 +49,7 @@ module.exports = {
   },
   pages,
   contact: [
-    {icon: 'envelope', text: 'bartender.group@gmail.com'},
+    {icon: 'envelope', text: 'barramovilmendoza@gmail.com'},
     {icon: 'phone', text: `261 575-2841`},
     {icon: 'facebook', text: '<a href="https://www.facebook.com/PVHeventos/">Bartender Group</a>'}
   ]
