@@ -35,7 +35,7 @@ module.exports = {
     title: "BARTENDER GROUP",
     author: "IDEE",
     logo: 'logo.svg',
-    contactUrl: 'https://ideenegocios.com.ar:3001/barra-movil-mendoza'
+    contactUrl: 'https://dev.ideenegocios.com.ar:3001/barra-movil-mendoza'
   },
   assets: {
     img: join(root, img),
