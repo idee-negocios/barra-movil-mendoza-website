@@ -98,6 +98,11 @@
 
 @include mobile {
   .ab-contact {
+    .icon {
+      img {
+        width: 100%;
+      }
+    }
     .form {
       .left-content, .right-content {
         float: none;
